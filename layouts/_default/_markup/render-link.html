@@ -5,4 +5,4 @@
     {{- $url = .Permalink -}}
   {{- end -}}
 {{- end -}}
-<a href="{{ $url }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
+<a href="{{ $url }}" target="_blank" rel="noopener"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
