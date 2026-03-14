@@ -17,7 +17,7 @@ ingredients:
 prep_time: 100 minutes
 cook_time: 150 minutes
 servings: "40"
-draft: true
+draft: false
 ---
 
 ## Instructions
