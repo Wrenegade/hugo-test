@@ -29,7 +29,7 @@ draft: false
 
 This is just a test for Mortadella
 
-Check out the [Simple Pasta Aglio e Olio](/blog/sample-recipe/) too.
+Check out the [Simple Pasta Aglio e Olio](sample-recipe.md) too.
 
 # Lorem Ipsum
 

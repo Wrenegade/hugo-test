@@ -1,0 +1,8 @@
+{{- $url := .Destination -}}
+{{- if strings.HasSuffix $url ".md" -}}
+  {{- $path := strings.TrimSuffix ".md" $url -}}
+  {{- with .Page.GetPage $path -}}
+    {{- $url = .Permalink -}}
+  {{- end -}}
+{{- end -}}
+<a href="{{ $url }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
