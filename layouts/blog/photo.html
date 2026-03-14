@@ -4,7 +4,7 @@
   {{ with .Params.image }}
   <img class="photo-hero" src="{{ . }}" alt="{{ $.Title }}">
   {{ end }}
-  <div class="post-header">
+  <div class="post-header" style="text-align: center;">
     {{ with .Params.categories }}
     <div style="margin-bottom: 12px;">
       {{ range . }}<span class="badge badge-{{ lower . }}">{{ . }}</span>{{ end }}
