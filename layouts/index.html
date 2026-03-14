@@ -1,0 +1,26 @@
+{{ define "main" }}
+<h2 class="section-heading">Recent Posts</h2>
+<div class="posts-grid">
+  {{ range first 12 (where .Site.RegularPages "Section" "blog") }}
+  <div class="post-card">
+    <a href="{{ .Permalink }}">
+      {{ with .Params.image }}
+      <div class="post-card-image-wrap">
+        <img class="post-card-image" src="{{ . }}" alt="{{ $.Title }}">
+      </div>
+      {{ end }}
+      <div class="post-card-body">
+        {{ with .Params.categories }}
+        <div>
+          {{ range . }}<span class="badge badge-{{ lower . }}">{{ . }}</span>{{ end }}
+        </div>
+        {{ end }}
+        <div class="post-card-title">{{ .Title }}</div>
+        <div class="post-card-meta">{{ .Date.Format "January 2, 2006" }}</div>
+        {{ if .Summary }}<div class="post-card-excerpt">{{ .Summary }}</div>{{ end }}
+      </div>
+    </a>
+  </div>
+  {{ end }}
+</div>
+{{ end }}

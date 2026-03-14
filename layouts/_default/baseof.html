@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sage: #8B9D83;
+      --sage-dark: #6B7D63;
+      --terracotta: #D87461;
+      --warm-gray: #F5F5F5;
+      --text-primary: #2D2D2D;
+      --text-secondary: #666666;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--text-primary);
+      background: #fff;
+    }
+
+    /* --- Header --- */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      background: linear-gradient(to right, var(--sage), var(--sage-dark));
+    }
+    .header-top {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+    }
+    .site-logo:hover { opacity: 0.9; }
+    .header-nav {
+      height: 40px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+    }
+    .header-nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+      display: flex;
+      gap: 24px;
+    }
+    .header-nav a {
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .header-nav a:hover { color: #fff; }
+    .header-spacer { height: 96px; }
+
+    /* --- Main Container --- */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* --- Homepage Post Cards --- */
+    .posts-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-top: 32px;
+    }
+    @media (min-width: 768px) { .posts-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .posts-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .post-card {
+      background: #fff;
+      transition: box-shadow 0.5s;
+    }
+    .post-card:hover { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1); }
+    .post-card a { text-decoration: none; color: inherit; }
+    .post-card-image {
+      width: 100%;
+      aspect-ratio: 16/11;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.7s;
+    }
+    .post-card:hover .post-card-image { transform: scale(1.05); }
+    .post-card-image-wrap { overflow: hidden; }
+    .post-card-body { padding: 16px 20px; }
+    .post-card-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+    .post-card-meta {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+    .post-card-excerpt {
+      font-size: 14px;
+      color: var(--text-secondary);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* --- Category Badges --- */
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 500;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+    .badge-general { background: #eff6ff; color: #1d4ed8; }
+    .badge-workflow { background: #faf5ff; color: #7e22ce; }
+    .badge-recipe { background: #fff7ed; color: #c2410c; }
+    .badge-ai { background: #eff6ff; color: #1d4ed8; }
+    .badge-hobbies { background: #faf5ff; color: #7e22ce; }
+    .badge-musings { background: #f0f9ff; color: #0369a1; }
+
+    /* --- Section Headings --- */
+    .section-heading {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 32px;
+      color: var(--text-primary);
+    }
+
+    /* --- Single Post (Standard) --- */
+    .post-header {
+      margin-bottom: 32px;
+    }
+    .post-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+    @media (min-width: 768px) { .post-title { font-size: 42px; } }
+    .post-meta {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+    .post-content {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+    .post-content h1 { font-family: 'Noto Serif JP', serif; font-size: 32px; font-weight: 700; margin: 1.5em 0 0.5em; }
+    .post-content h2 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; margin: 1.4em 0 0.5em; }
+    .post-content h3 { font-family: 'Noto Serif JP', serif; font-size: 22px; font-weight: 700; margin: 1.3em 0 0.5em; }
+    .post-content p { margin-bottom: 1em; }
+    .post-content ul, .post-content ol { margin-bottom: 1em; padding-left: 1.5em; }
+    .post-content li { margin-bottom: 0.3em; }
+    .post-content blockquote {
+      border-left: 4px solid var(--sage);
+      padding-left: 24px;
+      margin: 1.5em 0;
+      font-style: italic;
+      color: var(--text-secondary);
+      font-size: 20px;
+    }
+    .post-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 1.5em 0;
+    }
+    .post-content a { color: var(--sage-dark); text-decoration: underline; }
+    .post-content a:hover { color: var(--sage); }
+    .post-content strong { font-weight: 700; }
+    .post-content em { font-style: italic; }
+    .post-content code {
+      background: var(--warm-gray);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 0.9em;
+    }
+    .post-content pre {
+      background: var(--warm-gray);
+      padding: 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1em;
+    }
+    .post-content pre code { background: none; padding: 0; }
+
+    /* --- Photo Layout --- */
+    .photo-hero {
+      width: 100%;
+      max-height: 60vh;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 32px;
+    }
+
+    /* --- Recipe Layout --- */
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    @media (min-width: 768px) { .recipe-grid { grid-template-columns: 300px 1fr; } }
+    .recipe-sidebar {
+      background: var(--warm-gray);
+      padding: 24px;
+      border-radius: 0;
+      height: fit-content;
+    }
+    @media (min-width: 768px) { .recipe-sidebar { position: sticky; top: 112px; } }
+    .recipe-sidebar h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text-primary);
+    }
+    .recipe-sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .recipe-sidebar li {
+      padding: 8px 0;
+      border-bottom: 1px solid #e5e5e5;
+      font-size: 15px;
+    }
+    .recipe-sidebar li:last-child { border-bottom: none; }
+    .recipe-instructions {
+      counter-reset: step;
+    }
+    .recipe-instructions h2 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    /* --- Back Link --- */
+    .back-link {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      margin-bottom: 24px;
+      transition: color 0.3s;
+    }
+    .back-link:hover { color: var(--sage); }
+
+    /* --- Footer --- */
+    .site-footer {
+      margin-top: 96px;
+      padding: 64px 0;
+      border-top: 1px solid #f0f0f0;
+      background: #fff;
+    }
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+
+    /* --- Search --- */
+    .search-box {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
+    .search-box input {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 14px;
+      padding: 4px 12px;
+      width: 200px;
+      border: none;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      outline: none;
+      transition: background 0.3s;
+    }
+    .search-box input::placeholder { color: rgba(255,255,255,0.5); }
+    .search-box input:focus { background: rgba(255,255,255,0.3); }
+
+    /* --- Mobile --- */
+    @media (max-width: 767px) {
+      .header-nav { display: none; }
+      .header-spacer { height: 56px; }
+      .section-heading { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top">
+      <a href="/" class="site-logo">{{ .Site.Title }}</a>
+    </div>
+    <nav class="header-nav">
+      <div class="header-nav-inner">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <div class="search-box">
+          <input type="text" id="site-search" placeholder="Search posts..." onkeyup="filterPosts()">
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="header-spacer"></div>
+  <main class="container">
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; {{ now.Year }} {{ .Site.Title }}</p>
+    </div>
+  </footer>
+  <script>
+    function filterPosts() {
+      const query = document.getElementById('site-search').value.toLowerCase();
+      const cards = document.querySelectorAll('.post-card');
+      cards.forEach(card => {
+        const title = card.querySelector('.post-card-title')?.textContent.toLowerCase() || '';
+        const excerpt = card.querySelector('.post-card-excerpt')?.textContent.toLowerCase() || '';
+        const badges = card.querySelectorAll('.badge');
+        let cats = '';
+        badges.forEach(b => cats += b.textContent.toLowerCase() + ' ');
+        card.style.display = (title.includes(query) || excerpt.includes(query) || cats.includes(query)) ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>

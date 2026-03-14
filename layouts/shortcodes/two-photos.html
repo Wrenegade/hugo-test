@@ -1,0 +1,4 @@
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 1.5em 0;">
+  <img src="{{ .Get 0 }}" alt="{{ if .Get 2 }}{{ .Get 2 }}{{ else }}Photo 1{{ end }}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
+  <img src="{{ .Get 1 }}" alt="{{ if .Get 3 }}{{ .Get 3 }}{{ else }}Photo 2{{ end }}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
+</div>

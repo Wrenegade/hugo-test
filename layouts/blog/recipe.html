@@ -1,0 +1,33 @@
+{{ define "main" }}
+<article>
+  <a href="/blog/" class="back-link">&larr; Back to posts</a>
+  {{ with .Params.image }}
+  <img class="photo-hero" src="{{ . }}" alt="{{ $.Title }}">
+  {{ end }}
+  <div class="post-header">
+    {{ with .Params.categories }}
+    <div style="margin-bottom: 12px;">
+      {{ range . }}<span class="badge badge-{{ lower . }}">{{ . }}</span>{{ end }}
+    </div>
+    {{ end }}
+    <h1 class="post-title">{{ .Title }}</h1>
+    <p class="post-meta">{{ .Date.Format "January 2, 2006" }}</p>
+  </div>
+  <div class="recipe-grid">
+    <aside class="recipe-sidebar">
+      <h3>Ingredients</h3>
+      <ul>
+        {{ range .Params.ingredients }}
+        <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+      {{ with .Params.prep_time }}<p style="margin-top: 16px; font-size: 14px;"><strong>Prep:</strong> {{ . }}</p>{{ end }}
+      {{ with .Params.cook_time }}<p style="font-size: 14px;"><strong>Cook:</strong> {{ . }}</p>{{ end }}
+      {{ with .Params.servings }}<p style="font-size: 14px;"><strong>Servings:</strong> {{ . }}</p>{{ end }}
+    </aside>
+    <div class="recipe-instructions post-content">
+      {{ .Content }}
+    </div>
+  </div>
+</article>
+{{ end }}
