@@ -1,10 +1,11 @@
 ---
-title: "A Photo Post"
+title: A Photo Post
 date: 2026-03-14
-layout: "photo"
-categories: ["Hobbies"]
-image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80"
-draft: false
+layout: photo
+categories:
+  - Hobbies
+image: https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80
+draft: true
 ---
 
 This post uses the **photo** layout. The hero image fills the top of the page — great for travel, nature, or any image-heavy post.

@@ -1,8 +1,9 @@
 ---
-title: "First Post"
+title: Template First Post
 date: 2026-03-14
-categories: ["General"]
-draft: false
+categories:
+  - General
+draft: true
 ---
 
 This is a test post using the **standard** layout (the default). No `layout` field needed in front matter — it just works.
