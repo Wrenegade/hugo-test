@@ -3,9 +3,7 @@
   <div class="subscribe-card">
     <h1>Join the Newsletter</h1>
     <p class="subtitle">Get weekly updates on new posts, projects, and insights delivered straight to your inbox.</p>
-    <form class="subscribe-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleSubscribe(event)">
-      <input type="hidden" name="form-name" value="newsletter">
-      <p style="display:none"><input name="bot-field"></p>
+    <form class="subscribe-form" onsubmit="handleSubscribe(event)">
       <input type="text" name="name" placeholder="Your name (optional)">
       <input type="email" name="email" placeholder="Your email address" required>
       <button type="submit">Subscribe</button>
@@ -18,16 +16,21 @@
   function handleSubscribe(e) {
     e.preventDefault();
     const form = e.target;
-    fetch('/', {
+    const data = {
+      email: form.email.value,
+      name: form.name.value || undefined
+    };
+    fetch('/api/newsletter', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(new FormData(form)).toString()
-    }).then(() => {
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(res => {
+      if (!res.ok) return res.json().then(d => { throw new Error(d.error); });
       form.style.display = 'none';
       document.querySelector('.subscribe-privacy').style.display = 'none';
       document.getElementById('subscribe-success').style.display = 'block';
-    }).catch(() => {
-      alert('Something went wrong. Please try again.');
+    }).catch(err => {
+      alert(err.message || 'Something went wrong. Please try again.');
     });
   }
 </script>

@@ -2,3 +2,7 @@ public/
 .hugo_build.lock
 .DS_Store
 .obsidian/
+Dockerfile
+autodeploy.sh
+nginx.conf
+claude_notes.md
