@@ -59,6 +59,11 @@ He welcomed me in like an old friend, shook my hand firmly, and immediately apol
 
 He remembered everything. Specific roads in countries I'd never visited. The weight of his panniers on certain climbs. People he'd met once, forty years ago, whose names he could still recall. At one point I spotted the Guinness plaque on the wall — _Most Traveled Man_ — and there it was, physical proof of the thing I'd read about as a myth, hanging in a fifteen-by-fifteen room full of a lifetime.
 
+![](https://seattlewren.s3.us-west-2.amazonaws.com/heinz/IMG_2137a.jpeg)
+
+
+
+
 ## The Bike
 
 After a few hours, I asked about the bike--the one I've seen in all the pictures of him.
