@@ -10,6 +10,7 @@
     </form>
     <p class="subscribe-privacy">No spam, unsubscribe anytime. We respect your privacy.</p>
     <p class="subscribe-success" id="subscribe-success">&#10003; Successfully subscribed!</p>
+    <a class="subscribe-home-link" id="subscribe-home-link" href="/">&#8592; Back to Home</a>
   </div>
 </div>
 <script>
@@ -29,6 +30,7 @@
       form.style.display = 'none';
       document.querySelector('.subscribe-privacy').style.display = 'none';
       document.getElementById('subscribe-success').style.display = 'block';
+      document.getElementById('subscribe-home-link').style.display = 'block';
     }).catch(err => {
       alert(err.message || 'Something went wrong. Please try again.');
     });
