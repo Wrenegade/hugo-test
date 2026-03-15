@@ -88,7 +88,7 @@ I grabbed two of the last beers, brought one to him, and we cracked them open.
 
 _Prost._
 I was having a beer with Heinz Stücke. The man most people have never heard of and almost everyone should know.
-![]()
+
 He asked where I was headed on my little European trip.  I told him that I was headed to Iceland afterwards on my way back to Seattle.  Of course, he had been there a few times and told me about all the places I should see.  Then, within an arms reach, he grabs a photo off his wall and shows me:
 ![](https://seattlewren.s3.us-west-2.amazonaws.com/heinz/IMG_2132a.jpeg)
 "This is Gullfoss Falls" he says.  Even back then, they had a fence keeping tourist from doing exactly what Heinz did (see him?).  Having visiting there, it would have been hard enough to do it running on my feet.  Somehow, he dragged his bicycle down there AND had someone take the shot?  Incredible.
