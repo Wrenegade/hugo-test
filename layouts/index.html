@@ -1,26 +1,77 @@
 {{ define "main" }}
-<h2 class="section-heading">Recent Posts</h2>
-<div class="posts-grid">
-  {{ range first 12 (where .Site.RegularPages "Section" "blog") }}
-  <div class="post-card">
-    <a href="{{ .Permalink }}">
-      {{ with .Params.image }}
-      <div class="post-card-image-wrap">
-        <img class="post-card-image" src="{{ . }}" alt="{{ $.Title }}">
-      </div>
+
+{{ $posts := where .Site.RegularPages "Section" "blog" }}
+
+{{/* === FEATURED HERO (centered, large) === */}}
+{{ $featured := index $posts 0 }}
+<article class="hero-feature">
+  {{ with $featured.Params.categories }}
+    {{ range . }}<span class="article-tag tag-{{ . | urlize }}">{{ . }}</span> {{ end }}
+  {{ end }}
+  <h1 class="hero-title"><a href="{{ $featured.Permalink }}">{{ $featured.Title }}</a></h1>
+  {{ with $featured.Params.description }}
+    <p class="hero-excerpt">{{ . }}</p>
+  {{ end }}
+  <span class="article-byline">By JON WREN</span>
+</article>
+
+{{/* === SECONDARY FEATURED (next 2 posts) === */}}
+<div class="secondary-features">
+{{ range $posts | after 1 | first 2 }}
+  <article class="secondary-feature">
+    {{ with .Params.categories }}
+      {{ range . }}<span class="article-tag tag-{{ . | urlize }}">{{ . }}</span> {{ end }}
+    {{ end }}
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    {{ with .Params.description }}
+      <p class="article-excerpt">{{ . }}</p>
+    {{ end }}
+    <span class="article-byline">By JON WREN</span>
+  </article>
+{{ end }}
+</div>
+
+{{/* === TWO-COLUMN: LATEST (left) | TRENDING (right) === */}}
+<div class="two-col">
+  <div class="col-left">
+    <div class="section-label">Latest</div>
+    <div class="compact-card"><span class="article-tag tag-ai">AI</span> <a href="#">Why RAG Is Replacing Fine-Tuning for Most Teams</a></div>
+    <div class="compact-card"><span class="article-tag tag-data">Data</span> <a href="#">The Hidden Cost of Dirty Data in ML Pipelines</a></div>
+    <div class="compact-card"><span class="article-tag tag-lifestyle">Lifestyle</span> <a href="#">What I Learned From 30 Days Without Screens</a></div>
+    <div class="compact-card"><span class="article-tag tag-ai">AI</span> <a href="#">Local LLMs Are Good Enough Now</a></div>
+    <div class="compact-card"><span class="article-tag tag-data">Data</span> <a href="#">Postgres Is the Only Database You Need</a></div>
+    <div class="compact-card"><span class="article-tag tag-lifestyle">Lifestyle</span> <a href="#">The Case for Walking Meetings</a></div>
+  </div>
+  <div class="col-right">
+    <div class="section-label">Trending</div>
+    <div class="compact-card"><span class="article-tag tag-ai">AI</span> <a href="#">Claude vs GPT-5: What Actually Matters</a></div>
+    <div class="compact-card"><span class="article-tag tag-my-recipes">My Recipes</span> <a href="#">Smoked Salmon Pasta That Takes 15 Minutes</a></div>
+    <div class="compact-card"><span class="article-tag tag-data">Data</span> <a href="#">DuckDB Changed How I Think About Analytics</a></div>
+    <div class="compact-card"><span class="article-tag tag-lifestyle">Lifestyle</span> <a href="#">Why I Bike Commute in the Rain</a></div>
+  </div>
+</div>
+
+{{/* === CATEGORY SECTIONS === */}}
+{{ $categories := slice "AI" "Data" "Lifestyle" "My Recipes" }}
+{{ range $cat := $categories }}
+  {{ $catPosts := where $posts ".Params.categories" "intersect" (slice $cat) }}
+  {{ if $catPosts }}
+  <div class="category-section">
+    <div class="category-section-header">
+      <span class="section-label" style="padding-top: 0;">{{ lower $cat }}</span>
+      {{ $catSlug := $cat | urlize }}
+      <a class="see-all" href="/categories/{{ $catSlug }}/">All {{ $cat }} articles &rarr;</a>
+    </div>
+    {{ range $catPosts | first 5 }}
+    <div class="compact-card">
+      {{ with .Params.categories }}
+        {{ range . }}<span class="article-tag tag-{{ . | urlize }}">{{ . }}</span> {{ end }}
       {{ end }}
-      <div class="post-card-body">
-        {{ with .Params.categories }}
-        <div>
-          {{ range . }}<span class="badge badge-{{ lower . }}">{{ . }}</span>{{ end }}
-        </div>
-        {{ end }}
-        <div class="post-card-title">{{ .Title }}</div>
-        {{ with .Params.description }}<div class="post-card-excerpt" style="font-style: italic;">{{ . }}</div>{{ end }}
-        <div class="post-card-meta">{{ .Date.Format "January 2, 2006" }}</div>
-      </div>
-    </a>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </div>
+    {{ end }}
   </div>
   {{ end }}
-</div>
+{{ end }}
+
 {{ end }}

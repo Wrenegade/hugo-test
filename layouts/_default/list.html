@@ -1,26 +1,15 @@
 {{ define "main" }}
-<h2 class="section-heading">{{ .Title }}</h2>
-<div class="posts-grid">
-  {{ range .Pages }}
-  <div class="post-card">
-    <a href="{{ .Permalink }}">
-      {{ with .Params.image }}
-      <div class="post-card-image-wrap">
-        <img class="post-card-image" src="{{ . }}" alt="{{ $.Title }}">
-      </div>
-      {{ end }}
-      <div class="post-card-body">
-        {{ with .Params.categories }}
-        <div>
-          {{ range . }}<span class="badge badge-{{ lower . }}">{{ . }}</span>{{ end }}
-        </div>
-        {{ end }}
-        <div class="post-card-title">{{ .Title }}</div>
-        {{ with .Params.description }}<div class="post-card-excerpt" style="font-style: italic;">{{ . }}</div>{{ end }}
-        <div class="post-card-meta">{{ .Date.Format "January 2, 2006" }}</div>
-      </div>
-    </a>
-  </div>
+<div class="section-label" style="padding-top: 24px;">{{ .Title }}</div>
+{{ range .Pages }}
+<article class="article-card">
+  {{ with .Params.categories }}
+    {{ range . }}<span class="article-tag tag-{{ . | urlize }}">{{ . }}</span> {{ end }}
   {{ end }}
-</div>
+  <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+  {{ with .Params.description }}
+    <p class="article-excerpt">{{ . }}</p>
+  {{ end }}
+  <span class="article-byline">By JON WREN &middot; {{ .Date.Format "January 2, 2006" }}</span>
+</article>
+{{ end }}
 {{ end }}

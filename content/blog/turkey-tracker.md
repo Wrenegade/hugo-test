@@ -3,7 +3,8 @@ title: I Built a Turkey Deal Finder with APIs, Local AI, and Zero Dollars
 date: 2026-03-10
 layout: photo
 categories:
-  - Hobbies
+  - AI
+  - Data
 image: https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80
 draft: false
 description: Bought 15 turkeys for about $100!

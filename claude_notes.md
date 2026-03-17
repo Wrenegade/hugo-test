@@ -22,21 +22,26 @@ The existing React/Vite app at `/home/u49382/seattlewren/` is the current **prod
 
 ### Dev / Hugo Site (jonnywren.com)
 - **Source**: `/home/u49382/seattlewren-prod/`
-- **Stack**: Hugo static site → nginx (Docker)
-- **Container**: `seattlewren-hugo-dev` (port 9247)
+- **Stack**: Hugo static site → nginx + FastAPI backend (Docker Compose)
+- **Containers**: `seattlewren-hugo-dev` (port 9247), `seattlewren-backend-hugo` (internal 8000)
+- **Compose**: `docker-compose.yml` (gitignored, local only)
 - **Hugo version**: 0.147.2 (via `hugomods/hugo` Docker image)
+- **Backend**: FastAPI — `POST /api/newsletter` and `POST /api/page-views`
+- **Database**: Shared postgres at `mypostgres` via `host.docker.internal:5432` (db: `seattle_wren`)
 - **Domain**: jonnywren.com → Cloudflare Tunnel → localhost:9247
 - **baseURL**: Set to `"/"` (relative paths) in `hugo.toml`
+- **Note**: Fully self-contained — no dependency on old React app containers
 
 ## Docker Setup
-- **Dockerfile**: Multi-stage build in `/home/u49382/seattlewren-prod/Dockerfile`
-  - Stage 1: `hugomods/hugo:0.147.2` builds the site with `hugo --minify`
-  - Stage 2: `nginx:alpine` serves the built `/public` directory
-- Both `Dockerfile` and `autodeploy.sh` are in `.gitignore` (local to this machine only)
+- **docker-compose.yml** (gitignored): Orchestrates `hugo` + `backend` services on a shared compose network
+- **Dockerfile** (gitignored): Multi-stage Hugo build → nginx:alpine
+- **backend/Dockerfile** (tracked): Python 3.12-slim + uvicorn
+- **backend/main.py** (tracked): FastAPI app with newsletter + page view endpoints
+- Gitignored deploy files: `Dockerfile`, `docker-compose.yml`, `nginx.conf`, `autodeploy.sh`
 
 ### Manual rebuild command:
 ```bash
-docker build -t seattlewren-hugo-dev . && docker rm -f seattlewren-hugo-dev && docker run -d --name seattlewren-hugo-dev --restart unless-stopped -p 9247:80 seattlewren-hugo-dev
+cd /home/u49382/seattlewren-prod && docker compose up -d --build
 ```
 
 ## Auto-Deploy
@@ -75,7 +80,7 @@ systemctl --user restart cloudflared
 ## Git
 - **Repo**: https://github.com/Wrenegade/seattlewren-prod.git
 - **Branch**: main
-- `.gitignore` includes: `Dockerfile`, `autodeploy.sh`, `public/`, `.hugo_build.lock`
+- `.gitignore` includes: `Dockerfile`, `docker-compose.yml`, `autodeploy.sh`, `nginx.conf`, `public/`, `.hugo_build.lock`
 
 ## Other Containers on This Box
 | Container | Port | Purpose |
@@ -86,6 +91,7 @@ systemctl --user restart cloudflared
 | home-inventory-backend | 5001 | Home inventory API |
 | seattle-wren-frontend | 8083 | SeattleWren prod (React) |
 | seattle-wren-backend | internal | SeattleWren prod API |
-| seattlewren-hugo-dev | 9247 | SeattleWren Hugo dev |
+| seattlewren-hugo-dev | 9247 | SeattleWren Hugo dev (nginx) |
+| seattlewren-backend-hugo | internal | SeattleWren Hugo backend (FastAPI) |
 | mypostgres | 5432 | Shared PostgreSQL |
 | homeassistant | 8123 | Home Assistant |
