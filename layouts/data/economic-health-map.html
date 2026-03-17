@@ -279,6 +279,13 @@
     border-radius: 8px;
     padding: 16px 20px;
   }
+  .econ-stat-card.clickable {
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+  .econ-stat-card.clickable:hover {
+    border-color: var(--accent);
+  }
   .econ-stat-label {
     font-family: 'DM Mono', monospace;
     font-size: 11px;
@@ -397,6 +404,7 @@
   }
   .econ-table tr:hover td {
     background: var(--border-light);
+    cursor: pointer;
   }
 
   /* Data note */
@@ -504,12 +512,12 @@
       <div class="econ-stat-value" id="stat-avg-value">&mdash;</div>
       <div class="econ-stat-sub" id="stat-avg-sub"></div>
     </div>
-    <div class="econ-stat-card">
+    <div class="econ-stat-card clickable" id="stat-high-card">
       <div class="econ-stat-label" id="stat-high-label">Highest</div>
       <div class="econ-stat-value" id="stat-high-value">&mdash;</div>
       <div class="econ-stat-sub" id="stat-high-sub"></div>
     </div>
-    <div class="econ-stat-card">
+    <div class="econ-stat-card clickable" id="stat-low-card">
       <div class="econ-stat-label" id="stat-low-label">Lowest</div>
       <div class="econ-stat-value" id="stat-low-value">&mdash;</div>
       <div class="econ-stat-sub" id="stat-low-sub"></div>
@@ -1183,10 +1191,12 @@
     statHighLbl.textContent = 'Highest';
     statHighVal.textContent = cfg.format(highest.value);
     statHighSub.textContent = highest.name;
+    statHighVal.parentElement.setAttribute('data-fips', highest.fips);
 
     statLowLbl.textContent = 'Lowest';
     statLowVal.textContent = cfg.format(lowest.value);
     statLowSub.textContent = lowest.name;
+    statLowVal.parentElement.setAttribute('data-fips', lowest.fips);
   }
 
   // ============================================
@@ -1268,7 +1278,7 @@
     var bottom10 = entries.slice(-10).reverse();
 
     topTable.innerHTML = top10.map(function(e) {
-      return '<tr>' +
+      return '<tr data-fips="' + e.fips + '">' +
         '<td><span class="swatch" style="background:' + colorScale(e.value) + '"></span>' + e.name + '</td>' +
         '<td>' + e.state + '</td>' +
         '<td class="value-cell">' + cfg.format(e.value) + '</td>' +
@@ -1276,7 +1286,7 @@
     }).join('');
 
     bottomTable.innerHTML = bottom10.map(function(e) {
-      return '<tr>' +
+      return '<tr data-fips="' + e.fips + '">' +
         '<td><span class="swatch" style="background:' + colorScale(e.value) + '"></span>' + e.name + '</td>' +
         '<td>' + e.state + '</td>' +
         '<td class="value-cell">' + cfg.format(e.value) + '</td>' +
@@ -1304,6 +1314,43 @@
       opt.textContent = statesInData[sf];
       stateSelect.appendChild(opt);
     });
+  }
+
+  function zoomToCounty(fips) {
+    var feat = countyFeatures.find(function(f) { return f._fips === fips; });
+    if (!feat) return;
+
+    var rect = mapWrapper.getBoundingClientRect();
+    var w = rect.width;
+    var scale = w / CANVAS_W;
+
+    var path = d3.geoPath(projection);
+    var bounds = path.bounds(feat);
+    var dx = bounds[1][0] - bounds[0][0];
+    var dy = bounds[1][1] - bounds[0][1];
+    var cx = (bounds[0][0] + bounds[1][0]) / 2;
+    var cy = (bounds[0][1] + bounds[1][1]) / 2;
+
+    // Zoom in close but cap it
+    var zoomScale = Math.min(
+      (CANVAS_W * 0.4) / Math.max(dx, 1),
+      (CANVAS_H * 0.4) / Math.max(dy, 1),
+      18
+    );
+    var tx = CANVAS_W / 2 - cx * zoomScale;
+    var ty = CANVAS_H / 2 - cy * zoomScale;
+
+    var t = d3.zoomIdentity
+      .translate(tx * scale, ty * scale)
+      .scale(zoomScale);
+
+    if (zoomBehavior) {
+      d3.select(mainCanvas).transition().duration(600)
+        .call(zoomBehavior.transform, t);
+    }
+
+    // Scroll the map into view
+    mapWrapper.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
   function zoomToState(stateFips) {
@@ -1439,6 +1486,26 @@
     btn.addEventListener('click', function() {
       switchMetric(this.getAttribute('data-metric'));
     });
+  });
+
+  // Summary card click -> zoom to highest/lowest county
+  document.getElementById('stat-high-card').addEventListener('click', function() {
+    var fips = this.getAttribute('data-fips');
+    if (fips) zoomToCounty(fips);
+  });
+  document.getElementById('stat-low-card').addEventListener('click', function() {
+    var fips = this.getAttribute('data-fips');
+    if (fips) zoomToCounty(fips);
+  });
+
+  // Table row click -> zoom to county
+  topTable.addEventListener('click', function(e) {
+    var row = e.target.closest('tr[data-fips]');
+    if (row) zoomToCounty(row.getAttribute('data-fips'));
+  });
+  bottomTable.addEventListener('click', function(e) {
+    var row = e.target.closest('tr[data-fips]');
+    if (row) zoomToCounty(row.getAttribute('data-fips'));
   });
 
   stateSelect.addEventListener('change', function() {
