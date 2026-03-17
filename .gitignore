@@ -2,6 +2,7 @@ public/
 .hugo_build.lock
 .DS_Store
 .obsidian/
-Dockerfile
+/Dockerfile
 autodeploy.sh
 nginx.conf
+docker-compose.yml
