@@ -1,6 +1,8 @@
 {{ define "main" }}
 
-{{ $posts := where .Site.RegularPages "Section" "blog" }}
+{{ $blogPosts := where .Site.RegularPages "Section" "blog" }}
+{{ $dataPosts := where .Site.RegularPages "Section" "data" }}
+{{ $posts := union $blogPosts $dataPosts }}
 {{ $featured := index $posts 0 }}
 
 {{/* ============================================
@@ -21,7 +23,7 @@
         {{ range $posts | first 4 }}
         <div class="sidebar-card">
           {{ with .Params.image }}
-          <img src="{{ . }}" alt="" class="sidebar-card-img" loading="lazy">
+          <a href="{{ $.Permalink }}"><img src="{{ . }}" alt="" class="sidebar-card-img" loading="lazy"></a>
           {{ end }}
           <div class="sidebar-card-content">
             {{ with .Params.categories }}
@@ -45,7 +47,7 @@
         {{ end }}
         <span class="byline">By JON WREN</span>
         {{ with $featured.Params.image }}
-        <img class="hero-center-img" src="{{ . }}" alt="{{ $featured.Title }}" loading="lazy">
+        <a href="{{ $featured.Permalink }}"><img class="hero-center-img" src="{{ . }}" alt="{{ $featured.Title }}" loading="lazy"></a>
         {{ end }}
       </div>
 
@@ -100,7 +102,7 @@
     {{ range $catPosts | first 4 }}
     <article class="card-grid-item">
       {{ with .Params.image }}
-      <img src="{{ . }}" alt="" loading="lazy">
+      <a href="{{ $.Permalink }}"><img src="{{ . }}" alt="" loading="lazy"></a>
       {{ end }}
       <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
       {{ with .Params.description }}

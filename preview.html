@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+  <title>Seattle Wren</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -190,10 +190,10 @@
     .cat-badge {
       display: inline-block;
       font-family: 'DM Mono', monospace;
-      font-size: 14px;
+      font-size: 11px;
       font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 0.18em;
+      letter-spacing: 1.5px;
       padding: 6px 14px;
       border-radius: 4px;
       background: var(--tag-bg);
@@ -204,10 +204,10 @@
     /* Inline category label (used in cards, hero) */
     .cat-label {
       font-family: 'DM Mono', monospace;
-      font-size: 14px;
+      font-size: 11px;
       font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 0.18em;
+      letter-spacing: 1.5px;
       color: var(--accent);
     }
 
@@ -223,10 +223,10 @@
     }
     .section-see-all {
       font-family: 'DM Mono', monospace;
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 0.14em;
+      letter-spacing: 1px;
       color: var(--accent);
     }
     .section-see-all:hover { color: var(--accent-hover); }
@@ -237,10 +237,10 @@
        ============================================ */
     .byline {
       font-family: 'DM Mono', monospace;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 400;
       text-transform: uppercase;
-      letter-spacing: 0.14em;
+      letter-spacing: 1px;
       color: var(--text-tertiary);
     }
 
@@ -267,31 +267,31 @@
       text-align: center;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
-      padding: 0;
+      padding: 20px 0;
     }
     .hero-center .cat-label {
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
     .hero-title {
       font-family: 'DM Serif Display', Georgia, serif;
-      font-size: clamp(28px, 3.5vw, 48px);
+      font-size: 36px;
       font-weight: 400;
-      line-height: 1.1;
-      letter-spacing: -0.025em;
+      line-height: 1.15;
       margin-bottom: 20px;
-      max-width: 640px;
       color: var(--text);
     }
     .hero-title a { color: var(--text); }
     .hero-title a:hover { color: var(--text-secondary); }
+    @media (min-width: 768px) { .hero-title { font-size: 48px; } }
+    @media (min-width: 1024px) { .hero-title { font-size: 54px; } }
     .hero-excerpt {
-      font-size: 21px;
+      font-size: 16px;
       color: var(--text-secondary);
-      line-height: 1.55;
-      margin-bottom: 10px;
-      max-width: 520px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      max-width: 540px;
     }
     .hero-center-img {
       width: 100%;
@@ -324,17 +324,16 @@
     }
     .sidebar-card-content { flex: 1; }
     .sidebar-card-content .cat-label {
-      font-size: 13px;
+      font-size: 10px;
       display: block;
       margin-bottom: 4px;
     }
     .sidebar-card-content h3 {
       font-family: 'DM Serif Display', Georgia, serif;
-      font-size: 24px;
+      font-size: 15px;
       font-weight: 400;
-      line-height: 1.25;
-      letter-spacing: -0.01em;
-      margin-bottom: 6px;
+      line-height: 1.3;
+      margin-bottom: 4px;
     }
     .sidebar-card-content h3 a { color: var(--text); }
     .sidebar-card-content h3 a:hover { color: var(--text-secondary); }
@@ -347,7 +346,7 @@
     .trending-card:last-child { border-bottom: none; }
     .trending-card h3 {
       font-family: 'DM Serif Display', Georgia, serif;
-      font-size: 21px;
+      font-size: 16px;
       font-weight: 400;
       line-height: 1.3;
       margin-bottom: 6px;
@@ -472,23 +471,18 @@
     .article-text-card .cat-label { display: block; margin-bottom: 8px; }
     .article-text-card h2 {
       font-family: 'DM Serif Display', Georgia, serif;
-      font-size: 27px;
+      font-size: 22px;
       font-weight: 400;
       line-height: 1.25;
-      letter-spacing: -0.01em;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .article-text-card h2 a { color: var(--text); }
     .article-text-card h2 a:hover { color: var(--text-secondary); }
     .article-text-card .article-excerpt {
-      font-size: 18px;
+      font-size: 14px;
       color: var(--text-secondary);
-      line-height: 1.55;
-      margin-bottom: 12px;
-      display: -webkit-box;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+      line-height: 1.5;
+      margin-bottom: 8px;
     }
 
     /* ============================================
@@ -516,346 +510,23 @@
     }
     .card-grid-item h3 {
       font-family: 'DM Serif Display', Georgia, serif;
-      font-size: 27px;
+      font-size: 17px;
       font-weight: 400;
-      line-height: 1.25;
-      letter-spacing: -0.01em;
-      margin-bottom: 8px;
+      line-height: 1.3;
+      margin-bottom: 6px;
     }
     .card-grid-item h3 a { color: var(--text); }
     .card-grid-item h3 a:hover { color: var(--text-secondary); }
     .card-grid-item .article-excerpt {
-      font-size: 18px;
+      font-size: 13px;
       color: var(--text-secondary);
-      line-height: 1.55;
-      margin-bottom: 12px;
+      line-height: 1.5;
+      margin-bottom: 6px;
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
-
-    /* ============================================
-       SINGLE POST — two-column with right rail
-       ============================================ */
-    .post-layout {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 40px;
-      padding-top: 8px;
-    }
-    @media (min-width: 1024px) {
-      .post-layout {
-        grid-template-columns: 1fr 280px;
-        gap: 60px;
-      }
-    }
-
-    /* Right rail / sidebar */
-    .post-rail {
-      padding-top: 40px;
-    }
-    @media (min-width: 1024px) {
-      .post-rail {
-        position: sticky;
-        top: 80px;
-        align-self: start;
-      }
-    }
-    .rail-section {
-      margin-bottom: 40px;
-    }
-    .rail-section-title {
-      margin-bottom: 16px;
-    }
-    .rail-card {
-      padding: 12px 0;
-      border-bottom: 1px solid var(--border-light);
-    }
-    .rail-card:last-child { border-bottom: none; }
-    .rail-card .cat-label {
-      font-size: 10px;
-      display: block;
-      margin-bottom: 4px;
-    }
-    .rail-card h4 {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-size: 15px;
-      font-weight: 400;
-      line-height: 1.3;
-      margin-bottom: 4px;
-    }
-    .rail-card h4 a { color: var(--text); }
-    .rail-card h4 a:hover { color: var(--text-secondary); }
-    .rail-ad-slot {
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-      border-radius: 12px;
-      padding: 28px 22px;
-      text-align: center;
-      color: #fff;
-      position: relative;
-      overflow: hidden;
-    }
-    .rail-ad-slot::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle at 30% 70%, rgba(211, 140, 90, 0.15) 0%, transparent 50%),
-                  radial-gradient(circle at 70% 30%, rgba(100, 140, 200, 0.1) 0%, transparent 50%);
-      pointer-events: none;
-    }
-    .rail-ad-logo {
-      font-family: 'DM Serif Display', serif;
-      font-size: 22px;
-      font-weight: 400;
-      color: #d3a077;
-      margin-bottom: 10px;
-      position: relative;
-    }
-    .rail-ad-tagline {
-      font-family: 'Inter', sans-serif;
-      font-size: 14px;
-      line-height: 1.5;
-      color: rgba(255,255,255,0.85);
-      margin-bottom: 16px;
-      position: relative;
-    }
-    .rail-ad-cta {
-      display: inline-block;
-      font-family: 'DM Mono', monospace;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: #1a1a2e;
-      background: #d3a077;
-      padding: 8px 20px;
-      border-radius: 20px;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.2s;
-      position: relative;
-    }
-    .rail-ad-cta:hover {
-      background: #e0b48f;
-      transform: translateY(-1px);
-    }
-    .rail-ad-label {
-      font-family: 'DM Mono', monospace;
-      font-size: 9px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: rgba(255,255,255,0.35);
-      margin-top: 14px;
-      position: relative;
-    }
-    [data-theme="dark"] .rail-ad-slot {
-      background: linear-gradient(135deg, #0d0d1a 0%, #111827 50%, #0a1628 100%);
-    }
-
-    .post-header { margin-bottom: 32px; padding-top: 40px; }
-    .post-title {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-size: 47px;
-      font-weight: 400;
-      line-height: 1.15;
-      margin-bottom: 12px;
-    }
-    @media (min-width: 768px) { .post-title { font-size: 62px; } }
-    .post-description {
-      font-size: 20px;
-      color: var(--text-secondary);
-      line-height: 1.55;
-      margin-bottom: 16px;
-      max-width: 640px;
-    }
-    .post-meta {
-      font-family: 'DM Mono', monospace;
-      font-size: 13px;
-      color: var(--text-tertiary);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      padding-bottom: 20px;
-      margin-bottom: 24px;
-      border-bottom: 3px solid var(--border-heavy);
-    }
-    .post-content {
-      max-width: 800px;
-      font-size: 17px;
-      line-height: 1.8;
-    }
-    .post-content h1 { font-family: 'DM Serif Display', Georgia, serif; font-size: 32px; font-weight: 400; margin: 1.5em 0 0.5em; }
-    .post-content h2 { font-family: 'DM Serif Display', Georgia, serif; font-size: 28px; font-weight: 400; margin: 1.4em 0 0.5em; }
-    .post-content h3 { font-family: 'DM Serif Display', Georgia, serif; font-size: 22px; font-weight: 400; margin: 1.3em 0 0.5em; }
-    .post-content p { margin-bottom: 1em; }
-    .post-content ul, .post-content ol { margin-bottom: 1em; padding-left: 1.5em; }
-    .post-content li { margin-bottom: 0.3em; }
-    .post-content blockquote {
-      border-left: 3px solid var(--accent);
-      padding-left: 20px;
-      margin: 1.5em 0;
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-style: italic;
-      color: var(--text-secondary);
-      font-size: 20px;
-    }
-    .post-content img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 4px;
-      margin: 1.5em 0;
-    }
-    .post-content a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
-    .post-content a:hover { color: var(--accent-hover); }
-    .post-content strong { font-weight: 700; }
-    .post-content em { font-style: italic; }
-    .post-content code {
-      background: var(--code-bg);
-      padding: 2px 6px;
-      border-radius: 3px;
-      font-size: 0.9em;
-      font-family: 'DM Mono', monospace;
-    }
-    .post-content pre {
-      background: var(--code-bg);
-      padding: 16px;
-      border-radius: 6px;
-      overflow-x: auto;
-      margin-bottom: 1em;
-    }
-    .post-content pre code { background: none; padding: 0; }
-
-    /* ============================================
-       PHOTO HERO
-       ============================================ */
-    .photo-hero {
-      width: 100%;
-      max-height: 60vh;
-      object-fit: cover;
-      display: block;
-      margin-bottom: 32px;
-      border-radius: 12px;
-    }
-
-    /* ============================================
-       RECIPE LAYOUT
-       ============================================ */
-    .recipe-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 40px;
-      max-width: 800px;
-    }
-    @media (min-width: 768px) { .recipe-grid { grid-template-columns: 260px 1fr; } }
-    .recipe-sidebar {
-      background: var(--bg-card);
-      border: 1px solid var(--border-light);
-      padding: 24px;
-      border-radius: 4px;
-      height: fit-content;
-    }
-    @media (min-width: 768px) { .recipe-sidebar { position: sticky; top: 80px; } }
-    .recipe-sidebar h3 {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-size: 18px;
-      font-weight: 400;
-      margin-bottom: 12px;
-    }
-    .recipe-sidebar ul { list-style: none; padding: 0; }
-    .recipe-sidebar li {
-      padding: 8px 0;
-      border-bottom: 1px solid var(--border-light);
-      font-size: 14px;
-    }
-    .recipe-sidebar li:last-child { border-bottom: none; }
-
-    /* ============================================
-       BACK LINK
-       ============================================ */
-    .back-link {
-      display: inline-block;
-      font-family: 'DM Mono', monospace;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text-tertiary);
-      text-decoration: none;
-      margin-bottom: 8px;
-      padding-top: 24px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .back-link:hover { color: var(--accent); }
-
-    /* ============================================
-       SUBSCRIBE PAGE
-       ============================================ */
-    .subscribe-wrapper {
-      display: flex;
-      justify-content: center;
-      padding: 80px 0;
-    }
-    .subscribe-card {
-      width: 100%;
-      max-width: 480px;
-      border: 2px solid var(--border);
-      border-radius: 8px;
-      padding: 48px 40px;
-      text-align: center;
-      background: var(--bg-card);
-    }
-    .subscribe-card h1 {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-size: 32px;
-      font-weight: 400;
-      margin-bottom: 8px;
-    }
-    .subscribe-card .subtitle {
-      font-size: 15px;
-      color: var(--text-secondary);
-      margin-bottom: 28px;
-      line-height: 1.5;
-    }
-    .subscribe-form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      max-width: 320px;
-      margin: 0 auto;
-    }
-    .subscribe-form input {
-      font-family: 'Inter', sans-serif;
-      font-size: 14px;
-      padding: 12px 16px;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      background: var(--bg);
-      color: var(--text);
-      outline: none;
-    }
-    .subscribe-form input:focus { border-color: var(--accent); }
-    .subscribe-form input::placeholder { color: var(--text-tertiary); }
-    .subscribe-form button {
-      font-family: 'Inter', sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      padding: 12px 16px;
-      border: none;
-      border-radius: 6px;
-      background: var(--green-dark);
-      color: var(--tag-text);
-      cursor: pointer;
-      transition: opacity 0.2s;
-    }
-    .subscribe-form button:hover { opacity: 0.85; }
-    .subscribe-privacy {
-      font-size: 12px;
-      color: var(--text-tertiary);
-      margin-top: 16px;
-    }
-    .subscribe-success { display: none; font-size: 16px; margin-top: 20px; color: var(--text); }
-    .subscribe-home-link { display: none; margin-top: 12px; font-size: 14px; }
-    .subscribe-home-link a { color: var(--accent); text-decoration: underline; }
 
     /* ============================================
        FOOTER
@@ -880,18 +551,6 @@
     .footer-links { display: flex; gap: 20px; }
 
     /* ============================================
-       LIST PAGE
-       ============================================ */
-    .list-page-header {
-      padding: 40px 0 24px;
-    }
-    .list-page-header h1 {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-size: 36px;
-      font-weight: 400;
-    }
-
-    /* ============================================
        MOBILE ADJUSTMENTS
        ============================================ */
     @media (max-width: 768px) {
@@ -906,19 +565,6 @@
       }
       .section-header { flex-wrap: wrap; gap: 8px; }
     }
-
-    /* ============================================
-       TWO-PHOTO / TWO-VIDEO SHORTCODES
-       ============================================ */
-    .two-photos, .two-videos {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin: 1.5em 0;
-    }
-    @media (max-width: 600px) {
-      .two-photos, .two-videos { grid-template-columns: 1fr; }
-    }
   </style>
 </head>
 <body>
@@ -928,11 +574,10 @@
         <span class="site-logo-icon">
           <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="4"/></svg>
         </span>
-        <span class="site-logo-text">{{ .Site.Title | lower }}</span>
+        <span class="site-logo-text">seattle wren</span>
       </a>
       <div class="header-right">
         <a href="/blog/">Blog</a>
-        <a href="/data/unemployment/">Data</a>
         <a href="/about/">About</a>
         <a href="/subscribe/" class="nav-subscribe-btn">Subscribe</a>
         <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
@@ -945,16 +590,243 @@
   </header>
 
   <main>
-    {{ block "main" . }}{{ end }}
+    <!-- ============================================
+         SECTION 1: HERO — 3-column layout
+         Left: LATEST sidebar (with thumbnails)
+         Center: Big featured article
+         Right: TRENDING sidebar (text only)
+         ============================================ -->
+    <div class="container">
+      <hr class="section-divider">
+      <div class="hero-section">
+        <div class="hero-grid">
+
+          <!-- LEFT: Latest sidebar -->
+          <div class="hero-sidebar">
+            <div class="hero-sidebar-title">
+              <span class="cat-badge">Latest</span>
+            </div>
+            <div class="sidebar-card">
+              <img src="https://seattlewren.s3.us-west-2.amazonaws.com/aim-for-mediocre/aim-mediocre-hero.jpg" alt="" class="sidebar-card-img" loading="lazy">
+              <div class="sidebar-card-content">
+                <span class="cat-label">Lifestyle</span>
+                <h3><a href="#">Aim For Mediocre</a></h3>
+                <span class="byline">By JON WREN</span>
+              </div>
+            </div>
+            <div class="sidebar-card">
+              <img src="https://seattlewren.s3.us-west-2.amazonaws.com/mom-post/hero.png" alt="" class="sidebar-card-img" loading="lazy">
+              <div class="sidebar-card-content">
+                <span class="cat-label">Lifestyle</span>
+                <h3><a href="#">Jamaican Lottery Scams and My Mom</a></h3>
+                <span class="byline">By JON WREN</span>
+              </div>
+            </div>
+            <div class="sidebar-card">
+              <img src="https://via.placeholder.com/80x60?text=Heinz" alt="" class="sidebar-card-img" loading="lazy">
+              <div class="sidebar-card-content">
+                <span class="cat-label">Lifestyle</span>
+                <h3><a href="#">Heinz Stucke</a></h3>
+                <span class="byline">By JON WREN</span>
+              </div>
+            </div>
+            <div class="sidebar-card">
+              <img src="https://via.placeholder.com/80x60?text=Work+Pause" alt="" class="sidebar-card-img" loading="lazy">
+              <div class="sidebar-card-content">
+                <span class="cat-label">Lifestyle</span>
+                <h3><a href="#">Work Pause</a></h3>
+                <span class="byline">By JON WREN</span>
+              </div>
+            </div>
+            <div class="sidebar-card">
+              <img src="https://via.placeholder.com/80x60?text=Turkey" alt="" class="sidebar-card-img" loading="lazy">
+              <div class="sidebar-card-content">
+                <span class="cat-label">Data</span>
+                <h3><a href="#">Turkey Tracker</a></h3>
+                <span class="byline">By JON WREN</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CENTER: Featured hero article -->
+          <div class="hero-center">
+            <span class="cat-label">Lifestyle</span>
+            <h1 class="hero-title"><a href="#">Aim For Mediocre</a></h1>
+            <p class="hero-excerpt">Sometimes the pursuit of perfection keeps us stuck. Embracing mediocrity can be the key to actual progress and enjoying the journey.</p>
+            <span class="byline">By JON WREN</span>
+            <img class="hero-center-img" src="https://seattlewren.s3.us-west-2.amazonaws.com/aim-for-mediocre/aim-mediocre-hero.jpg" alt="Aim For Mediocre" loading="lazy">
+          </div>
+
+          <!-- RIGHT: Trending sidebar -->
+          <div class="hero-sidebar">
+            <div class="hero-sidebar-title">
+              <span class="cat-badge">Trending</span>
+            </div>
+            <div class="trending-card">
+              <h3><a href="#">Jamaican Lottery Scams and My Mom</a></h3>
+              <span class="byline">By JON WREN</span>
+            </div>
+            <div class="trending-card">
+              <h3><a href="#">Heinz Stucke</a></h3>
+              <span class="byline">By JON WREN</span>
+            </div>
+            <div class="trending-card">
+              <h3><a href="#">Work Pause</a></h3>
+              <span class="byline">By JON WREN</span>
+            </div>
+            <div class="trending-card">
+              <h3><a href="#">Turkey Tracker</a></h3>
+              <span class="byline">By JON WREN</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================
+         SECTION 2: FEATURED ROW — image cards
+         Large illustration left, dark overlay card right
+         ============================================ -->
+    <div class="container">
+      <hr class="section-divider">
+      <div class="featured-row-center">
+        <div class="featured-row">
+          <article class="article-text-card">
+            <span class="cat-label">Lifestyle</span>
+            <h2><a href="#">Jamaican Lottery Scams and My Mom</a></h2>
+            <p class="article-excerpt">Scammers killed my mom. This is a hard post to write, but the more people that know about this, the better.</p>
+            <span class="byline">By JON WREN</span>
+          </article>
+          <article class="article-text-card">
+            <span class="cat-label">Lifestyle</span>
+            <h2><a href="#">Heinz Stucke</a></h2>
+            <p class="article-excerpt">The incredible story of the man who cycled around the world for over 50 years.</p>
+            <span class="byline">By JON WREN</span>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================
+         SECTION 3: TWO-COL TEXT ARTICLES
+         ============================================ -->
+    <div class="container">
+      <hr class="section-divider">
+      <div class="two-col-articles" style="padding-top: 24px;">
+        <article class="article-text-card">
+          <span class="cat-label">Lifestyle</span>
+          <h2><a href="#">Work Pause</a></h2>
+          <p class="article-excerpt">Taking intentional breaks from work isn't laziness—it's a necessary part of sustainable productivity and creative thinking.</p>
+          <span class="byline">By JON WREN</span>
+        </article>
+        <article class="article-text-card">
+          <span class="cat-label">Data</span>
+          <h2><a href="#">Turkey Tracker</a></h2>
+          <p class="article-excerpt">A data-driven exploration of turkey consumption patterns and what they reveal about our culture and traditions.</p>
+          <span class="byline">By JON WREN</span>
+        </article>
+        <article class="article-text-card">
+          <span class="cat-label">My Recipes</span>
+          <h2><a href="#">Recipe: Moretadella</a></h2>
+          <p class="article-excerpt">A traditional recipe for moretadella with step-by-step instructions and personal cooking tips from the kitchen.</p>
+          <span class="byline">By JON WREN</span>
+        </article>
+        <article class="article-text-card">
+          <span class="cat-label">My Recipes</span>
+          <h2><a href="#">Sample Recipe</a></h2>
+          <p class="article-excerpt">An approachable recipe for everyday cooking that delivers on flavor and technique without unnecessary complexity.</p>
+          <span class="byline">By JON WREN</span>
+        </article>
+      </div>
+    </div>
+
+    <!-- ============================================
+         SECTION 4: CATEGORY SECTIONS — 4-col card grids
+         ============================================ -->
+    <!-- Lifestyle Category -->
+    <div class="container">
+      <hr class="section-divider">
+      <div class="section-header">
+        <span class="cat-badge">Lifestyle</span>
+        <a class="section-see-all" href="/categories/lifestyle/">All Lifestyle articles</a>
+      </div>
+      <div class="card-grid">
+        <article class="card-grid-item">
+          <img src="https://seattlewren.s3.us-west-2.amazonaws.com/aim-for-mediocre/aim-mediocre-hero.jpg" alt="" loading="lazy">
+          <h3><a href="#">Aim For Mediocre</a></h3>
+          <p class="article-excerpt">Sometimes the pursuit of perfection keeps us stuck. Embracing mediocrity can be the key to actual progress.</p>
+          <span class="byline">By JON WREN</span>
+        </article>
+        <article class="card-grid-item">
+          <img src="https://seattlewren.s3.us-west-2.amazonaws.com/mom-post/hero.png" alt="" loading="lazy">
+          <h3><a href="#">Jamaican Lottery Scams and My Mom</a></h3>
+          <p class="article-excerpt">A personal story about fraud, family, and the importance of staying vigilant in an increasingly dangerous digital world.</p>
+          <span class="byline">By JON WREN</span>
+        </article>
+        <article class="card-grid-item">
+          <img src="https://via.placeholder.com/400x250?text=Heinz" alt="" loading="lazy">
+          <h3><a href="#">Heinz Stucke</a></h3>
+          <p class="article-excerpt">The remarkable story of a man who spent 50+ years traveling the world on bicycle and what it teaches us about determination.</p>
+          <span class="byline">By JON WREN</span>
+        </article>
+        <article class="card-grid-item">
+          <img src="https://via.placeholder.com/400x250?text=Work+Pause" alt="" loading="lazy">
+          <h3><a href="#">Work Pause</a></h3>
+          <p class="article-excerpt">Taking intentional breaks from work isn't laziness—it's a necessary part of sustainable productivity and creativity.</p>
+          <span class="byline">By JON WREN</span>
+        </article>
+      </div>
+    </div>
+
+    <!-- Data Category -->
+    <div class="container">
+      <hr class="section-divider">
+      <div class="section-header">
+        <span class="cat-badge">Data</span>
+        <a class="section-see-all" href="/categories/data/">All Data articles</a>
+      </div>
+      <div class="card-grid">
+        <article class="card-grid-item">
+          <img src="https://via.placeholder.com/400x250?text=Turkey" alt="" loading="lazy">
+          <h3><a href="#">Turkey Tracker</a></h3>
+          <p class="article-excerpt">A data-driven exploration of turkey consumption patterns and what they reveal about our culture and traditions.</p>
+          <span class="byline">By JON WREN</span>
+        </article>
+      </div>
+    </div>
+
+    <!-- My Recipes Category -->
+    <div class="container">
+      <hr class="section-divider">
+      <div class="section-header">
+        <span class="cat-badge">My Recipes</span>
+        <a class="section-see-all" href="/categories/my-recipes/">All My Recipes articles</a>
+      </div>
+      <div class="card-grid">
+        <article class="card-grid-item">
+          <img src="https://via.placeholder.com/400x250?text=Moretadella" alt="" loading="lazy">
+          <h3><a href="#">Recipe: Moretadella</a></h3>
+          <p class="article-excerpt">A traditional recipe for moretadella with step-by-step instructions and personal cooking tips from the kitchen.</p>
+          <span class="byline">By JON WREN</span>
+        </article>
+        <article class="card-grid-item">
+          <img src="https://via.placeholder.com/400x250?text=Sample" alt="" loading="lazy">
+          <h3><a href="#">Sample Recipe</a></h3>
+          <p class="article-excerpt">An approachable recipe for everyday cooking that delivers on flavor and technique without unnecessary complexity.</p>
+          <span class="byline">By JON WREN</span>
+        </article>
+      </div>
+    </div>
+
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <span>&copy; {{ now.Year }} {{ .Site.Title }}</span>
+      <span>&copy; 2026 Seattle Wren</span>
       <div class="footer-links">
         <a href="/">Home</a>
         <a href="/blog/">Blog</a>
-        <a href="/data/unemployment/">Data</a>
         <a href="/about/">About</a>
         <a href="/subscribe/">Subscribe</a>
       </div>
@@ -995,13 +867,6 @@
         if (localStorage.getItem('theme') === 'system') applyTheme('system');
       });
     })();
-  </script>
-  <script>
-    fetch('/api/page-views', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ path: location.pathname })
-    }).catch(() => {});
   </script>
 </body>
 </html>

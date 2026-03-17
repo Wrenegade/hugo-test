@@ -7,6 +7,9 @@ title = "Seattle Wren"
     [markup.goldmark.renderer]
       unsafe = true
 
+[params]
+  censusApiKey = "59718e1cb53e0c767125daecc83e2d6dccd77d64"
+
 [taxonomies]
   category = "categories"
   tag = "tags"
