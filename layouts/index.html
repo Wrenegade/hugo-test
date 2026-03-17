@@ -21,9 +21,10 @@
           <span class="cat-badge">Latest</span>
         </div>
         {{ range $posts | first 4 }}
+        {{ $post := . }}
         <div class="sidebar-card">
           {{ with .Params.image }}
-          <a href="{{ $.Permalink }}"><img src="{{ . }}" alt="" class="sidebar-card-img" loading="lazy"></a>
+          <a href="{{ $post.Permalink }}"><img src="{{ . }}" alt="" class="sidebar-card-img" loading="lazy"></a>
           {{ end }}
           <div class="sidebar-card-content">
             {{ with .Params.categories }}
@@ -100,9 +101,10 @@
   </div>
   <div class="card-grid">
     {{ range $catPosts | first 4 }}
+    {{ $post := . }}
     <article class="card-grid-item">
       {{ with .Params.image }}
-      <a href="{{ $.Permalink }}"><img src="{{ . }}" alt="" loading="lazy"></a>
+      <a href="{{ $post.Permalink }}"><img src="{{ . }}" alt="" loading="lazy"></a>
       {{ end }}
       <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
       {{ with .Params.description }}
