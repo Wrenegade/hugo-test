@@ -10,7 +10,6 @@
      Right: TRENDING sidebar (text only)
      ============================================ */}}
 <div class="container">
-  <hr class="section-divider">
   <div class="hero-section">
     <div class="hero-grid">
 
@@ -19,7 +18,7 @@
         <div class="hero-sidebar-title">
           <span class="cat-badge">Latest</span>
         </div>
-        {{ range $posts | first 5 }}
+        {{ range $posts | first 4 }}
         <div class="sidebar-card">
           {{ with .Params.image }}
           <img src="{{ . }}" alt="" class="sidebar-card-img" loading="lazy">
@@ -45,6 +44,9 @@
           <p class="hero-excerpt">{{ . }}</p>
         {{ end }}
         <span class="byline">By JON WREN</span>
+        {{ with $featured.Params.image }}
+        <img class="hero-center-img" src="{{ . }}" alt="{{ $featured.Title }}" loading="lazy">
+        {{ end }}
       </div>
 
       {{/* RIGHT: Trending sidebar */}}
@@ -65,67 +67,7 @@
 </div>
 
 {{/* ============================================
-     SECTION 2: FEATURED ROW — image cards
-     Large illustration left, dark overlay card right
-     ============================================ */}}
-{{ if ge (len $posts) 2 }}
-<div class="container">
-  <hr class="section-divider">
-  <div class="featured-row featured-row-3">
-    {{/* Large image card */}}
-    {{ $second := index $posts 1 }}
-    <div class="featured-lg-card">
-      {{ with $second.Params.image }}
-      <img src="{{ . }}" alt="{{ $second.Title }}" loading="lazy">
-      {{ end }}
-    </div>
-
-    {{/* Overlay card */}}
-    {{ if ge (len $posts) 3 }}
-    {{ $third := index $posts 2 }}
-    <div class="featured-overlay-card">
-      {{ with $third.Params.image }}
-      <img src="{{ . }}" alt="{{ $third.Title }}" loading="lazy">
-      {{ end }}
-      <div class="overlay-content">
-        {{ with $third.Params.categories }}
-          {{ range first 1 . }}<span class="cat-label">{{ . }}</span>{{ end }}
-        {{ end }}
-        <h2><a href="{{ $third.Permalink }}">{{ $third.Title }}</a></h2>
-        <span class="byline">By JON WREN</span>
-      </div>
-    </div>
-    {{ end }}
-  </div>
-</div>
-{{ end }}
-
-{{/* ============================================
-     SECTION 3: TWO-COL TEXT ARTICLES
-     ============================================ */}}
-{{ $remaining := $posts | after 3 }}
-{{ if $remaining }}
-<div class="container">
-  <hr class="section-divider">
-  <div class="two-col-articles" style="padding-top: 24px;">
-    {{ range $remaining | first 4 }}
-    <article class="article-text-card">
-      {{ with .Params.categories }}
-        {{ range first 1 . }}<span class="cat-label">{{ . }}</span>{{ end }}
-      {{ end }}
-      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-      {{ with .Params.description }}
-        <p class="article-excerpt">{{ . }}</p>
-      {{ end }}
-      <span class="byline">By JON WREN</span>
-    </article>
-    {{ end }}
-  </div>
-</div>
-{{ end }}
-
-{{/* ============================================
-     SECTION 4: CATEGORY SECTIONS — 4-col card grids
+     CATEGORY SECTIONS — 4-col card grids
      ============================================ */}}
 {{ $categories := .Site.Taxonomies.categories }}
 {{ range $catName, $catPages := $categories }}

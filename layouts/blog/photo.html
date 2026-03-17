@@ -1,22 +1,57 @@
 {{ define "main" }}
-<div class="container-narrow">
-  <article>
-    <a href="/" class="back-link">&larr; Back to posts</a>
-    {{ with .Params.image }}
-    <img class="photo-hero" src="{{ . }}" alt="{{ $.Title }}">
-    {{ end }}
-    <div class="post-header" style="padding-top: 0;">
+<div class="container">
+  <div class="post-layout">
+    {{/* LEFT: Article content */}}
+    <article>
+      <a href="/" class="back-link">&larr; Back to posts</a>
+      <div class="post-header">
+        {{ with .Params.categories }}
+        <div style="margin-bottom: 12px;">
+          {{ range . }}<span class="cat-label">{{ . }}</span> {{ end }}
+        </div>
+        {{ end }}
+        <h1 class="post-title">{{ .Title }}</h1>
+        {{ with .Params.description }}
+        <p class="post-description">{{ . }}</p>
+        {{ end }}
+        <p class="post-meta">By JON WREN &middot; {{ .Date.Format "January 2, 2006" }}</p>
+      </div>
+      {{ with .Params.image }}
+      <img class="photo-hero" src="{{ . }}" alt="{{ $.Title }}">
+      {{ end }}
+      <div class="post-content">
+        {{ .Content }}
+      </div>
+    </article>
+
+    {{/* RIGHT: Rail sidebar */}}
+    <aside class="post-rail">
+      {{ $currentPage := . }}
+      {{ $related := slice }}
       {{ with .Params.categories }}
-      <div style="margin-bottom: 12px;">
-        {{ range . }}<span class="cat-label">{{ . }}</span> {{ end }}
+        {{ $cat := index . 0 }}
+        {{ $related = where (where site.RegularPages "Section" "blog") ".Params.categories" "intersect" (slice $cat) }}
+      {{ end }}
+      {{ $suggestions := where $related "Permalink" "ne" $currentPage.Permalink }}
+      {{ if $suggestions }}
+      <div class="rail-section">
+        <span class="cat-badge">Suggested Reading</span>
+        {{ range $suggestions | first 5 }}
+        <div class="rail-card">
+          {{ with .Params.categories }}
+            {{ range first 1 . }}<span class="cat-label">{{ . }}</span>{{ end }}
+          {{ end }}
+          <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+          <span class="byline">By JON WREN</span>
+        </div>
+        {{ end }}
       </div>
       {{ end }}
-      <h1 class="post-title">{{ .Title }}</h1>
-      <p class="post-meta">By JON WREN &middot; {{ .Date.Format "January 2, 2006" }}</p>
-    </div>
-    <div class="post-content">
-      {{ .Content }}
-    </div>
-  </article>
+
+      <div class="rail-section">
+        <div class="rail-ad-slot">Ad Space</div>
+      </div>
+    </aside>
+  </div>
 </div>
 {{ end }}
