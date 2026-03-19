@@ -95,6 +95,68 @@ So, my thread looked like this:
 *How do we go about changing it?*
 # What It Takes to Change the Pardon Powers
 
+Limiting the pardon power seems like a reasonable idea.  After all, it was designed under the assumption that one very well trusted man was going to hold this power, George Washington.  However, there was foresight into how this power could be abused even at the time of it's conception.  
+
+Edmund Randolph proposed an exception for treason, arguing it was "too great a trust," that the president "may himself be guilty," and that the "traitors may be his own instruments." [Congress.gov](https://constitution.congress.gov/browse/essay/artII-S2-C1-3-2/ALDE_00013317/)
+
+And George Mason argued treason should be excepted for fear the president could "frequently pardon crimes which were advised by himself" to "stop inquiry and prevent detection," eventually establishing a monarchy and destroying the republic. [Congress.gov](https://constitution.congress.gov/browse/essay/artII-S2-C1-3-2/ALDE_00013317/)
+
+They saw it coming, 237 years ago.
+
+Now, here's the bad news:  No President would ever sign a change like this into law.  Democrat, Republican, Independent....no one will do it.  Why would they?  It significantly cripples the one exclusive power the office has...forever.
+
+Here's the good news:  You don't need a Presidential signature.  This would be an amendment to the US Constitution and, thus, requires a 2/3 majority of State approval.  34 states need to vote in favor of this change and--bam--it's now part of the supreme law of the land.  Nothing the President can do about it.
+
+It's been done before:
+1. 22nd Amendment - Term Limits (1951): Franklin Roosevelt served for 13 years in office.  States didn't like it, Congress proposed 2 terms max, and States approved.
+2. 25th Amendment - Presidential Succession (1967):  Someone whacked Kennedy and they didn't have plan for afterwards.  They fixed it with a succession plan.
+3. 12th Amendment - Electoral College Runner-up (1804):  The original Constitution stated the runner up was Vice President.  Now, winner takes all.
+4. 18th (1919) and 21st (1933) Amendments - Prohibition:  *The cause of, and solution to, all of life's problems.* Temperance groups were tired of husband's coming home wasted.  WWI created xenophobia towards Germans and, thus, turbocharged the movement against German-American breweries.  Then, the Great Depression fueled speakeasies, bootlegging, and Al Capone.  13 years later, the "noble in motive and far reaching in purpose" experiment ended....Herbert Hoover.
+
+It's rare, but has clear procedural precedent.  So, what does that look like?
+
+## Amending the Constitution
+
+Honestly, it's quite simple....in theory.
+
+Step 1:.  A proposal is made
+Step 2:  The proposal is ratified.
+
+That's it, seriously.  And, there doesn't need to be a timeline.  The record for slowest ratification was the 27th Amendment regarding Congressional pay....proposed in 1789 by James Madison....ratified in 1992.   203 years.
+
+Here are the devils in the details
+
+### Ways to Propose
+There are two:  
+
+**1. Congressional proposal** 
+Someone in Congress (House or Senate) needs to write a "Joint Resolution" proposing a change to the Constitution with a brief description.  This is different from a legislative bill which is only relevant to Federal Law, which is *under* Constitutional law.  
+
+**2. Constitutional Convention**
+This is where, somehow, 34 states get together and agree on something...on their own.  It's never been done so let's not even bother with this one.
+
+Good news, #1 has already been done.  In December 2025 Congressman Johnny Olszewski (D-MD) introduced [House Joint Resolution 135, the "Pardon Integrity Act"](https://www.congress.gov/119/bills/hjres135/BILLS-119hjres135ih.pdf).  It has been co-signed by Don Bacon (R-NE) which means it has bi-partisan support.  There's a whole section on this coming later, hang tight.
+
+The JR needs to be approved by 2/3 of the House (290 members) and 2/3 of the Senate (67).  But, before that, it needs to "go to the floor" to be voted on...and the Speaker of the House controls what goes to the floor.  No Speaker approval--no vote.  It'll "die in committee" which is where the overwhelming majority of JRs go.  So sad.
+
+But, that's not exactly true!  There is a way to bypass the Speaker and that's with a Discharge Petition.  218 signatures from House members is all it takes to force an issue to vote.  The math isn't complicated:
+
+435 Total seats
+220 - Currently Republican
+215 - Currently Democratic
+
+So, if all Democrats signed, they would only need 3 Republicans.  The reverse would be true if the tables were flipped.  The point being, you need only a few from "the other side" and it's not an unreasonable amount.  But, whomever crossed that line would essentially be in defiance of their party leader but we'll get to that later.
+
+Again, this is just "to go to the floor" so the proposal could be voted on.
+
+**This is where it  gets rough**.  You still need 2/3 majority for both houses to approved the JR....290 votes in the House and 67 votes in the Senate.  Do the math, you would need 75 votes (currently) from "the other side" to pass the JR in the House.  That's a lot harder...but not impossible.  Like I said, it's been done before.
+
+But, this is where YOU come in.  After all, you are the ones that put those people in Congress.....we'll get to this later.
+
+### Ways to Ratify
+Let's just say, Congress voted "Yay" on the Joint Resolution (both House and Senate passed).  Now what?
+
+Normally, with a Bill, that would go to the President.  But this isn't a bill, it's Joint Resolution.  This goes *directly to the State legislation for all 50 States*.  Completely bypasses the President, by design.
 
 
 
