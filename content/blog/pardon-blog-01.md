@@ -77,16 +77,23 @@ Yeah, where am I going with all this?
 So, my thread looked like this:
 
 *Who does the Secret Service report to?* - DHS
+...
 *Does that mean they report to the President?* - Yes
+...
 *Can the President use them for surveillance?* - Nothing saying he/she can't.
-*Could the President pardon a SS member if he/she committed murder?* - Yes, if it's a Federal Case.  Not a State case.
-*Could the President order a SS member to murder a political opponent and then pardon them?* - Yes, on the Federal side.  But the State would make a case which the President couldn't pardon.
 ...
+*Could the President pardon a SS member if he/she committed murder?* - Yes, if it's a Federal conviction.  Not a State conviction.
 ...
+*Could the President order a SS member to murder a political opponent and then pardon them?* - Yes, on the Federal side.  But the State would make a parallel case which the President couldn't pardon.
 ...
-*How would one go about changing the Pardon section in the Constitution?*
-
-## What Would It Take to Change the Pardon Section
+*Can the President pardon him/herself?* - No precedent established.  So.....yes.  
+...
+*Doesn't the pardon power invite corruption?* - Yes :)
+...
+*Who's idea was this pardon thing?* - See previous sections
+...
+*How do we go about changing it?*
+# What It Takes to Change the Pardon Powers
 
 
 
