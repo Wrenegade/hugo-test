@@ -90,8 +90,8 @@
      CATEGORY SECTIONS — 4-col card grids
      ============================================ */}}
 {{ $categories := .Site.Taxonomies.categories }}
-{{ $orderedCats := slice "musings" "ai" "lifestyle" "data" }}
-{{ $catDisplay := dict "musings" "Musings" "ai" "AI" "lifestyle" "Lifestyle" "data" "Data" }}
+{{ $orderedCats := slice "musings" "ai" "social" "data" }}
+{{ $catDisplay := dict "musings" "Musings" "ai" "AI" "social" "Social" "data" "Data" }}
 {{ range $orderedCats }}
   {{ $catName := . }}
   {{ $catLabel := index $catDisplay $catName }}
