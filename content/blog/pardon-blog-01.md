@@ -1,5 +1,5 @@
 ---
-title: Presidential Pardon Power Invites Corruption
+title: Pardon Power - We're Overdue For A Constitutional Amendment.
 date: 2026-03-17
 layout: photo
 categories:
@@ -8,8 +8,6 @@ image: https://seattlewren.s3.us-west-2.amazonaws.com/pardon-post/hero.png
 draft: false
 description: The only place in the Federal Government that bypasses checks and balances...and can be changed without a presidential signature
 ---
-# Pardon Power - We're Overdue For A Constitutional Amendment.
-
 ## The Short Version
 
 The Presidential Pardoning Power needs guardrails. It won't be easy to change, it won't apply to the current administration or probably the next few — but it's the right thing to do for the long haul. Here's what I learned, and here's exactly what you can do about it.
