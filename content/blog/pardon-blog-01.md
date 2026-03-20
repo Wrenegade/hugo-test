@@ -3,7 +3,8 @@ title: Pardon Power - We're Overdue For A Constitutional Amendment.
 date: 2026-03-17
 layout: photo
 categories:
-  - Data
+  - Musings
+  - Politics
 image: https://seattlewren.s3.us-west-2.amazonaws.com/pardon-post/hero.png
 draft: false
 description: The only place in the Federal Government that bypasses checks and balances...and can be changed without a presidential signature
