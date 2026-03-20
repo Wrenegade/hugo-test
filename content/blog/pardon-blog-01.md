@@ -5,7 +5,7 @@ layout: photo
 categories:
   - Musings
   - Politics
-image: https://seattlewren.s3.us-west-2.amazonaws.com/pardon-post/hero.png
+image: https://logos-world.net/wp-content/uploads/2024/10/Department-of-Justice-Logo.png
 draft: false
 description: The only place in the Federal Government that bypasses checks and balances...and can be changed without a presidential signature
 ---
