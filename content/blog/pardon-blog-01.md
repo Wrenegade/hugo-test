@@ -8,275 +8,353 @@ image: https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80
 draft: true
 description: The only place in the Federal Government that bypasses checks and balances...and can be changed without a presidential signature
 ---
-## Intro
-The Presidential Pardoning Power has always been a topic of interest to me.  If you think about it, it's kind of crazy:  one individual has the right to legally forgive another, for almost anything.  I mean, I'm no Saint so I could think of a hundred ways to abuse this power for personal reasons.
+# Pardon Power - We're Overdue For A Constitutional Amendment.
 
-For the record, I place no judgement on any administration testing the boundaries of this power.   It exists in our Constitution and, thus, is meant to be used.  And, potentially, abused.  But, that distinction is defined by the very same individual making the pardon.  That's the crazy part.  I, hypothetically as President, am the only one responsible to determine the ethics behind....my decision.  Even crazier, there are no consequences!  I could be like "Whoops, my bad" and not even get a slap on the wrist. In a system full of checks and balances, this seems just out of whack.
+## The Short Version
 
-So, I started wondering, how did this all come about?  And, if I wanted to change it, what would that look like?  
+The Presidential Pardoning Power needs guardrails. It won't be easy to change, it won't apply to the current administration or probably the next few — but it's the right thing to do for the long haul. Here's what I learned, and here's exactly what you can do about it.
 
-TLDR:  It's not easy, but possible.  It wouldn't apply to the current administration and, probably, not the next few administrations.  This would be for the long haul but probably the right thing to to.
+---
+
 ## Political Disclaimer
-I won't be bashing any administration or even mention any names in this post for it is irrelevant to discussing our Federal process.  This content applies to all Presidents and, mostly, to future administrations.  Personally, I have voted for both sides of the isle and consider myself agnostic to any particular party.  I like diagnosing and solving interesting problems which is the motivation behind this post.
 
-If you're heavy leaning on any particular side, this isn't your read.  If you're interested in why pardon power, across ALL administrations, should evolve to something different...read on.
+I won't be bashing any administration or mentioning any names in this post. That's irrelevant to the Federal process, and frankly, a distraction. This applies to all Presidents — past, present, and future.
 
-## My Goal For This Post
-My goal for this post is 2 parts:
-1. Inform readers of what I've learned
-2. Provide a Step by Step action plan for you if you share the same sentiment
+For what it's worth, I've voted for both sides of the aisle and consider myself politically agnostic. I like diagnosing and solving interesting problems. That's my motivation here.
 
-The Problem:  I think the power to Pardon needs more guardrails.
-Who This Applies To:  Mankind
+If you're heavy leaning one way or the other, this probably isn't your read. If you're genuinely curious about why pardon power — across ALL administrations — should evolve into something with more accountability, read on.
 
-At times, I may sound patronizing by assuming the reader's ignorance to how our Government works.  I was ignorant to a lot of this and learned a ton during this research.  Please consider it more "I didn't know this so I'm writing it down for myself."  
+---
 
-## Brief History of the Secret Service (Probably delete this section)
-Originally, I went down the rabbit hole regarding the hierarchy for the Secret Service. Mostly, I was curious about who had ultimate control of that department.  Turns out, they report into the Department of Homeland Security, or DHS.  DHS, in turn, reports into the President. The President appoints the DHS head and, thus, ultimately controls the department of the Secret Service.
+## How I Got Here
 
-Citation:  https://www.secretservice.gov/about/history
-Interestingly, I learned about the history of the Secret Service and it's quite fascinating.  Here are some quick facts:
+It started with morning coffee-conversation with AI. Not even a real question, just a passing thought:
 
-- Founded July 5, 1865.  
-	- Predates the FBI, CIA, NSA, and DEA.  The Secret Service are considered America's first national law enforcement and intelligence agency.
-	- Founded only a few weeks after the last Confederate army surrendered.
-	- Approved for service by Lincoln on the same day he was shot. 
-- Originally founded to combat money counterfeiting.  
-	- At the time, 1600 banks existed all issuing their own currency.
-	- Estimated 1/3 to 1/2 of all currency was counterfeit
-	- Had nothing to do with protecting the President
-- Started Presidential Protection in 1901
-	- Original mission had nothing to do with protecting the president
-	- Protection mission was added after President McKinley was assassinated
-	- Protection is only half their job.  They are still responsible for counterfeiting and, now, Cybercrimes among other electronic crimes.
-	- Oddly, they are also responsible for the investigating illegal ownership of the http [1933 Double Eagle coin](https://en.wikipedia.org/wiki/1933_double_eagle)
-- Moved to Department of Homeland Security in 2003
-	- New DHS established after 9/11
-	- Consolidated multiple agencies under DHS, including the Secret Service
-	- Reports into the Secretary of DHS, whom is appointed by the President.
+_Who does the Secret Service report to?_
 
-Despite titled "Secret Service" they are one of the most recognized and well known agencies in the Federal Government.
+Turns out — the Department of Homeland Security. DHS, in turn, reports to the President. The President appoints the DHS Secretary. Which means the President ultimately controls the agency responsible for protecting his political rivals.
 
-## The Current Pardon Law
-The actual text that defines what the pardon thing is exists in the Constitution.  Specifically, Article II Section 2, is remarkably brief:
+Ok, interesting. So I cracked on.
 
-"...shall have Power to grant Reprieves and Pardons for Offences against the United States, except in Cases of Impeachment."
+_Does that mean the President could use the Secret Service for surveillance on former presidents?_
 
-There are some limitations.  
+Nothing in law explicitly prevents it.
 
-1. Cases of Impeachment.  What that means is that the President can not pardon someone to prevent or reverse an impeachment.
-2. State Crimes:  States have their own Constitutions and the President can not overrule those.  Example:  If someone is convicted of rape, that's a state crime and can not be pardoned.  Murder is almost always prosecuted at the State level. Robbery, drugs, all State level crimes.  But, possession of a weapon, that's Federal.  So, the President can pardon that crime but the criminal would still serve time for the State offenses.
-3. Federal and State Parallel cases:  Sometimes the Feds take over cases (ex: Mafia).  If the State is concerned of a potential pardon, the State will build a parallel case and convict, thus preventing a criminal to get off via the pardon.
+_Could the President pardon a Secret Service member who crossed a line carrying out those orders?_
 
-So, while the law is brief, it does have limitations.  However, the pardon power is loosely defined which leaves open lots of room for interpretation.
+Yup.  On the Federal side, absolutely.
 
-But, why do we even have it?  It's actually a relic from the British Crown.  Our founding fathers borrowed it from the "Prerogative of Mercy" dating back to the 17th Century.
+_Doesn't that invite corruption?_
 
-The Constitutional Convention of 1787 (which produced our US Constitution) is where the Pardon section was created.  Introduced by Charles Pinckney of South Carolina, no one debated it and thus became part of the Constitution.
+Yup yup! 😊
 
-However, the Convention had strong assumptions that George Washington would become the first President.  They designed the initial Office of the President around GW because everyone trusted him and allowed him incredible power to define the office more during his term.  The problem is that every President since has held that same amount power, including the power to pardon because it has never changed.
+_Where did this pardon power even come from? And how do we change it?_
 
-## Secret Service...Pardon Power....?? (Again, probably delete this section)
-Yeah, where am I going with all this?
+And that's where we start this rabbit hole. Eight hours of research later, what I found was fascinating, a little alarming, and — oddly — kind of hopeful.
 
-So, my thread looked like this:
+---
 
-*Who does the Secret Service report to?* - DHS
-...
-*Does that mean they report to the President?* - Yes
-...
-*Can the President use them for surveillance?* - Nothing saying he/she can't.
-...
-*Could the President pardon a SS member if he/she committed murder?* - Yes, if it's a Federal conviction.  Not a State conviction.
-...
-*Could the President order a SS member to murder a political opponent and then pardon them?* - Yes, on the Federal side.  But the State would make a parallel case which the President couldn't pardon.
-...
-*Can the President pardon him/herself?* - No precedent established.  So.....yes.  
-...
-*Doesn't the pardon power invite corruption?* - Yes :)
-...
-*Who's idea was this pardon thing?* - See previous sections
-...
-*How do we go about changing it?*
-# What It Takes to Change the Pardon Powers
+## A Brief and Surprisingly Interesting History of the Secret Service
 
-Limiting the pardon power seems like a reasonable idea.  After all, it was designed under the assumption that one very well trusted man was going to hold this power, George Washington.  However, there was foresight into how this power could be abused even at the time of it's conception.  
+Before we get to pardons, here's some quick context on the agency that started this whole thread. Most people think the Secret Service exists to protect the President. That's only half the story.
 
-Edmund Randolph proposed an exception for treason, arguing it was "too great a trust," that the president "may himself be guilty," and that the "traitors may be his own instruments." [Congress.gov](https://constitution.congress.gov/browse/essay/artII-S2-C1-3-2/ALDE_00013317/)
+**Founded July 5, 1865** — just weeks after the last Confederate army surrendered, and three months after Lincoln was assassinated. In fact, Lincoln approved the creation of the Secret Service on the same day he was shot. He never saw it commissioned.
 
-And George Mason argued treason should be excepted for fear the president could "frequently pardon crimes which were advised by himself" to "stop inquiry and prevent detection," eventually establishing a monarchy and destroying the republic. [Congress.gov](https://constitution.congress.gov/browse/essay/artII-S2-C1-3-2/ALDE_00013317/)
+The original mission had nothing to do with presidential protection. At the time, counterfeiting was an existential threat to the American economy. There were over 1,600 banks all issuing their own currency, and an estimated one-third to one-half of all currency in circulation was counterfeit. The country's financial foundation was rotting from the inside.
 
-They saw it coming, 237 years ago.
+**Presidential protection didn't come until 1901** — after President McKinley was assassinated. Even then it took years to formalize. Prior to McKinley, three sitting presidents had been assassinated and the government's approach to presidential security was ad hoc.
 
-Now, here's the bad news:  No President would ever sign a change like this into law.  Democrat, Republican, Independent....no one will do it.  Why would they?  It significantly cripples the one exclusive power the office has...forever.
+The Secret Service is also America's first national law enforcement agency — predating the FBI, CIA, NSA, and DEA.  And today, their mission is still split: half protection, half financial crimes — including counterfeiting, cybercrime, and bank fraud. They even have specific jurisdiction over illegal ownership of the [1933 Double Eagle gold coin](https://en.wikipedia.org/wiki/1933_double_eagle). Yep, that's a real thing.
 
-Here's the good news:  You don't need a Presidential signature.  This would be an amendment to the US Constitution and, thus, requires a 2/3 majority of State approval.  38 states need to vote in favor of this change and--bam--it's now part of the supreme law of the land.  Nothing the President can do about it.
+In 2003, post-9/11, the Secret Service moved from the Treasury Department — where it had lived for 138 years — to the newly created Department of Homeland Security. Which brings us back to the chain of command that started this whole conversation.
 
-It's been done before:
-1. 22nd Amendment - Term Limits (1951): Franklin Roosevelt served for 13 years in office.  States didn't like it, Congress proposed 2 terms max, and States approved.
-2. 25th Amendment - Presidential Succession (1967):  Someone whacked Kennedy and they didn't have plan for afterwards.  They fixed it with a succession plan.
-3. 12th Amendment - Electoral College Runner-up (1804):  The original Constitution stated the runner up was Vice President.  Now, winner takes all.
-4. 18th (1919) and 21st (1933) Amendments - Prohibition:  *The cause of, and solution to, all of life's problems.* Temperance groups were tired of husband's coming home wasted.  WWI created xenophobia towards Germans and turbocharged the movement against German-American breweries.  Then, the Great Depression fueled speakeasies, bootlegging, and Capone.  13 years later, the "noble in motive and far reaching in purpose" experiment ended....Herbert Hoover.
+The President controls DHS. DHS controls the Secret Service. The Secret Service protects former presidents, presidential candidates, and visiting heads of state. In theory, that means the President has structural influence over the very people protecting his rivals.
 
-It's rare, but has clear procedural precedent.  So, what does that look like?
+Is that likely to be abused? Can't say for certain. But here's the thing about structural vulnerabilities — they don't matter....until they do.
 
-## Amending the Constitution
+And that brings us to the actual problem.
 
-Honestly, it's quite simple....in theory.
+---
 
-Step 1:.  A proposal is made
-Step 2:  The proposal is ratified.
+## The Pardon Power: What It Is and Where It Came From
 
-That's it, seriously.  And, there doesn't need to be a timeline.  The record for slowest ratification was the 27th Amendment regarding Congressional pay....proposed in 1789 by James Madison....ratified in 1992.   203 years.
+The actual text that defines presidential pardoning power is remarkably short. Article II, Section 2 of the Constitution reads:
 
-There have been 27 amendments to the Constitution, beginning with the Bill of Rights — the first 10 amendments. [Constitution Center](https://constitutioncenter.org/the-constitution/amendments)
+_"...shall have Power to grant Reprieves and Pardons for Offences against the United States, except in Cases of Impeachment."_
 
-But here's the number that puts it in perspective:
+That's it. One sentence. 
 
-Approximately 11,985 proposals to amend the Constitution have been introduced in Congress since 1789. Twenty-seven of those have been ratified. That's a 0.2% success rate.  The odds aren't good but they are not zero.
+Think about that for a second. This one sentence grants the ability to legally forgive almost anyone for almost anything — to the President.  . No criteria. No process. No oversight. No appeal. Just: the President can do it.
 
-However, what you need to consider isn't the success rate but, more, then recency rate.  We've had 27 amendments in 238 years, or, 1 every 15 years.  The last one happened in 1992..over 30 years ago.
+Hey, I'm no saint, and I could think of a hundred ways to abuse that kind of power for personal reasons. The crazy part isn't even the power itself — it's that the person wielding it is also the only one responsible for determining the ethics behind their own decision. There are no external guardrails. No consequences for misuse. A President could hand out pardons like Halloween candy, shrug, and face exactly zero legal repercussions.
 
-**So, we're 15 years overdue to make an amendment.  And, that's exactly what our Founding Father's would have expected.**
+In a system famously built on checks and balances, this one just seems out of whack.
 
+**There are some limits.** A few worth knowing:
 
-### Ways to Propose
-There are two:  
+1. **Impeachment cases** — the President cannot pardon someone to prevent or reverse an impeachment. That's the one hard constitutional line.
+2. **State crimes** — the pardon power only covers Federal offenses. Rape, murder, robbery — almost always prosecuted at the state level — are completely untouchable by a presidential pardon. A president can pardon a Federal weapons charge while a state murder conviction from the same incident stands.
+3. **The parallel case strategy** — smart prosecutors, when they sense a pardon might be coming, will build a parallel state case alongside the Federal one. Even if the Federal conviction gets wiped, the state conviction holds and then 2. applies.
 
-**1. Congressional proposal** 
-Someone in Congress (House or Senate) needs to write a "Joint Resolution" proposing a change to the Constitution with a brief description.  This is different from a legislative bill which is only relevant to Federal Law, which is *under* Constitutional law.  
+**So where did this power come from?**
 
-**2. Constitutional Convention**
-This is where, somehow, 38 states get together and agree on something...on their own.  It's never been done so let's not even bother with this one.
+It's a relic from the British Crown. The founders borrowed it from something called the "Prerogative of Mercy" — a power held by English monarchs dating back to King Ine of Wessex in the 7th century. We took it from the country we revolted against.  Ironic.
 
-Good news, #1 has already been done.  In December 2025 Congressman Johnny Olszewski (D-MD) introduced [House Joint Resolution 135, the "Pardon Integrity Act"](https://www.congress.gov/119/bills/hjres135/BILLS-119hjres135ih.pdf).  It has been co-signed by Don Bacon (R-NE) which means it has bi-partisan support.  There's a whole section on how you can support this so hang tight.
+At the Constitutional Convention of 1787 — held in Philadelphia over a sweltering summer in a sealed room — the pardon clause was introduced by Charles Pinckney of South Carolina on May 29, 1787. Nobody debated it for months. Remarkable, for a gathering where everything else was argued to exhaustion.  The country was barely a country yet. They were making it all up as they went.
 
-The JR needs to be approved by 2/3 of the House (290 members) and 2/3 of the Senate (67).  But, before that, it needs to "go to the floor" to be voted on...and the Speaker of the House controls what goes to the floor.  No Speaker approval--no vote.  It'll "die in committee" which is where the overwhelming (12000) majority of JRs go.  So sad.
+_A quick note on that Convention:_ 55 delegates representing every state except Rhode Island spent four months essentially going rogue. They'd been authorized by Congress only to _revise_ the existing Articles of Confederation. Instead, they threw the whole thing out and wrote a new Constitution from scratch. They did this in secret — windows sealed against the Philadelphia heat, sworn to silence — and their debates weren't made public until James Madison's notes were published in 1836, nearly 50 years later. The American public had no idea what had been argued in that room for most of their lifetimes.
 
-But, that's not exactly true!  There is a way to bypass the Speaker and that's with what's called a "Discharge Petition".  218 signatures from House members is all it takes to force an issue to floor for a vote.  The math isn't complicated:
+Back to the pardon. At the very end of the Convention, a few delegates tried to add limits to the Pardon power.  Edmund Randolph proposed an exception for treason, arguing it was _"too great a trust,"_ that the president _"may himself be guilty,"_ and that the _"traitors may be his own instruments."_ [Congress.gov](https://constitution.congress.gov/browse/essay/artII-S2-C1-3-2/ALDE_00013317/)
 
-435 Total seats in the House (As of March 2026)
-220 - Currently Republican
-215 - Currently Democratic
+George Mason agreed, warning the president could _"frequently pardon crimes which were advised by himself"_ to _"stop inquiry and prevent detection,"_ eventually establishing a monarchy and destroying the republic. [Congress.gov](https://constitution.congress.gov/browse/essay/artII-S2-C1-3-2/ALDE_00013317/)
 
-So, if all Democrats signed, they would only need 3 Republicans.  The reverse would be true if the tables were flipped.  The point being, you need only a few from "the other side" and it's not an unreasonable amount.  But, whomever crossed that line would essentially be in defiance of their party leader but we'll get to that later.
+They were voted down. They saw it coming — 237 years ago — and got outvoted.
 
-Again, this is just "to go to the floor" so the proposal could be voted on.
+One likely reason the pardon power sailed through with so little debate: everyone at the Convention assumed George Washington would be the first President. They trusted him completely. The entire executive branch was essentially designed around George Washington's character — and then handed, intact, to every president who came after him.
 
-**This is where it  gets rough**.  You still need 2/3 majority for both houses to approve the JR....290 votes in the House and 67 votes in the Senate.  Do the math, you would need 75 votes (currently) from "the other side" to pass the JR in the House.  That's a lot harder...but not impossible.  Like I said, it's been done before.
+And, here we are today!
 
-But, this is where YOU come in.  After all, you are the ones that put those people in Congress.  They work for you of you vote them out.
+---
 
-### Ways to Ratify
-Let's just say, Congress voted "Yay" on the Joint Resolution (both House and Senate passed).  Now what?
+## What It Takes to Change It
 
-Normally, with a Bill, that would go to the President for signature.  But this isn't a bill, it's Joint Resolution.  This goes *directly to all 50 States legislations*, completely bypassing the President.  This is intentional in the process, the President's signature is not required nor requested and plays zero role in anything going forward.  It is processed 100% by the hands of the States.
+Here's the bad news first: no President would ever voluntarily sign a change like this into law. Democrat, Republican, Independent — never. Why would they? It permanently hamstrings the one exclusive power their office holds. 
 
-**What happens at the State level**
-Each state has it's own legislature, similar to Congress.  This gets introduced into the normal State legislative process and will get debated and voted on like anything else...minimum wages, legalizing weed, speed limits.  Only, this won't go to the Governor for approval....it bypasses that office too.  It is truly as close to a "By The People" vote as you can get.  After all, you elected those State officials too....right?
+Here's the good news: **you don't need a Presidential signature.**
 
-*It's weird, the Governor of your state has more power over YOU for your speed limit versus the power he/she has for you to make a Constitutional Amendment.  Think that over for a minute.* 
+Changing the pardon power requires amending the United States Constitution. And the constitutional amendment process was specifically designed to bypass the executive branch. **The** **President plays zero role**. Can't veto it. Can't block it. Can't even slow it down.
 
-So, 38 States need to approve the Federal Joint Resolution.  And, those are the people that you voted for...in theory.  You did vote for them, right?
+This has been done before. In fact, it has been done exactly 27 times before.  In response to exactly this kind of situation — where a power was being used in ways the founders couldn't fully anticipate:
 
-### Then What Happens? - The Archivist of the US
-Huh?  What the hell is that?
+- **22nd Amendment — Term Limits (1951):** Franklin Roosevelt served 13 years — four terms. Nobody had ever done it before. States didn't like it. Congress proposed a two-term limit, states approved it, and it became permanent law.
+    
+- **25th Amendment — Presidential Succession (1967):** Somebody whacked Kennedy and nobody had a clear plan for what came next. They fixed the gap with a formal succession framework.
+    
+- **12th Amendment — Electoral College (1804):** The original Constitution said the presidential runner-up became Vice President. Now, winner takes all.
+    
+- **18th and 21st Amendments — Prohibition (1919 and 1933):** _The cause of, and solution to, all of life's problems._ Temperance groups got tired of their husbands coming home wasted.  World War I turbocharged the movement — most breweries were German-American, and anti-German sentiment was thriving. The 18th Amendment passed in 1919 and Prohibition began in 1920. What followed was 13 years of speakeasies, bootlegging, Al Capone, and the systematic corruption of law enforcement coast to coast. The Great Depression made enforcement impossible. FDR ran on repeal in 1932, won in a landslide, and the 21st Amendment was ratified.
 
-Well, it's an actual role....with an actual person acting in that role.  For a Constitutional Amendment, the responsibility of the Archivist is:
+The pattern is always the same: start with good intentions, assume good faith, someone eventually pushes it to the extreme, the public demands a fix, Congress acts, and the amendment becomes permanent.
 
-1. Count the state ratifications as they come in
-2. Verify they're properly certified
-3. When 38 states have ratified — issue the proclamation
-4. Publish it in the Federal Register
+Sometimes it takes 13 years of organized crime. Sometimes it takes longer. But the system can correct itself — when enough people demand it.
 
-Think of this person as the highest level Notary in the Country.  Once he/she stamps the thing, it's Constitutional Law.  Nothing can change it unless it goes through another process to repeal (ex:  Prohibition).
+---
 
-Not too hard, eh?  Seriously, it's really not THAT complicated.  And, like I said, overdue.  What's wrong with thinking that an amendment should be made every 20 or 30 years?  At the pace people are evolving, it probably should be faster than that.
+## How Constitutional Amendments Actually Work
 
-So...here's where YOU come into this.
+Honestly, the process is simpler than most people think. In theory, anyway.
 
-## Limiting Presidential Pardoning Power - Step by Step
-A quick recap of everything up to now:
-1. Presidential Pardoning Power invites corruption and, I believe, needs reform.
-2. It requires as Amendment to the US Constitution and is not a regular legislative bill.
-3. Constitutional Amendments are passed by 38 State Legislations bypassing any power of the President or State Governors
-4. Congress still needs to vote and approve a Joint Resolution via 2/3s majority for it to go to the States for voting.
-5. Getting the Joint Resolution to the floor for a vote can bypass the Speaker via the Discharge Petition requiring 218 votes from the House
-6. Getting around #4 and #5 above is possible via a Constitutional State Convention, but that's never been done before.
-7. A Joint Resolution has already been introduced in Dec 2025 that has only 2 Cosponsers as of March 2026.
+**There are approximately 11,985 proposals to amend the Constitution introduced in Congress since 1789. Twenty-seven have been ratified.** That's a 0.2% success rate. The odds aren't great — but they're not zero. 
 
-Working our way backwards up that list, #7 is the only thing you should focus on right now.  Cosponsership is important because it shows support for an idea.  There are a lot of people talking about this now but, obviously, little action.  Think of cosponsership as momentum---more names, more momentum.  More momentum, more light.  More light, more political weight.  More weight, more action.
+But don't think of it like a hopeless statistic.  Think of it like this:
 
-So, if you agree that there should be guardrails around the power to Pardon, then here is what you do....step by step.
+We average one amendment roughly every 15 years. The last one was ratified in 1992.  34 years ago.  We're overdue.
 
-**Step 1:  Read the Joint Resolution - Pardon Integrity Act**
-As I mentioned before, a Joint Resolution has already been introduced.  It's 1 fucking page, read it. It's meant to be vague at this point, more detail could hinder "co-sponsoring".
-- https://www.congress.gov/bill/119th-congress/house-joint-resolution/135/text
+We you start thinking in terms of being overdue, then you can start really asking "why?"  
 
-**Step 2:  Determine if your representative has cosponsered it.**
-- https://www.congress.gov/bill/119th-congress/house-joint-resolution/135/cosponsor
+Well, the instruction manual that creates Constitutional change is the same today as it was 34 years ago....100 years ago.....200 years ago.  Nothing different.  So, if it's not systematic, then what?
 
--- If you see your House representatives name, you're good to go.
--- If not, go to Step 3
+This is only my opinion but I feel people have forgotten they *can* make change.  I feel that we've put too much responsibility on our representatives by, simply, not voicing our opinions.  If they don't hear from the people, they'll do whatever they'll do.  And, I don't judge them for it.  
 
-**Step 3: Make sure you know who your Federal Representatives are (1 House, 2 Senate)**
-At most, 45% of you vote in mid-term elections (versus 66% for Presidential elections).  That means, over half of you would stand in line for someone you'll never meet versus drive maybe 10 minutes to speak with the person who actually writes the laws you live by.  I'm hoping to educate you that this relationship is way more important that how you vote for President.
+This country was founded on human discussion, debate, and compromise.  You can't do that from your couch watching it all on TV.
 
-Find your House Rep
-https://www.house.gov/representatives/find-your-representative
+And, yes, I blame TV.  For just about everything.  Seriously.  
 
-Find your Senators
-https://www.senate.gov/senators/senators-contact.htm
+Except the Simpsons.
 
-**Step 4: Create 3 Contacts in your Phone with their Office Numbers**
-Seriously, just get this part out of the way now.  You're going to make a lot of calls.  Forget email for now.
+### Stage 1: Proposal
 
-**Step 5: Contact your House Representative and ask "Why have you not cosponsored Joint Resolution 135?"**
-Yes, you can do this.  And, they want you to.  They are your representatives to the Federal Government and over half of you didn't vote for them.  They want to know you.
+There are two ways to propose an amendment. One has been used 27 times. One has never been used. We'll focus on the first.
 
-Now, most likely, you won't speak directly to your representative at first.  You'll speak to one of their assistants---and this is fine.  Develop a relationship with that assistant.  Imma say that again...**spend the time to develop a strong relationship with the representative's assistant.**  They are the ones that will plant seeds for you.  They are also the ones that will return your call.  
+**Congressional Joint Resolution**
 
-Don't be surprised if you find that the assistant is some 25 year old Poly-Sci major.  This is common, but don't discount their age.  Their youth is an advantage as the weight of the world hasn't crushed their spirits yet and they still feel a sense of ideology.  Use it to your advantage.
+Someone in Congress writes a Joint Resolution — not a bill. Important distinction. A bill creates or changes Federal law. A Joint Resolution proposing a constitutional amendment is a different instrument entirely — it's Congress formally saying "we propose to change the Constitution itself." Once passed by two-thirds of both chambers, it **does not** go to the President. It goes directly to the states.
 
-**Here's how that first call is going to go:**
-REP1:  *"Hello, Congressman [SoandSo's] Office.   What is your address?"*
+The Joint Resolution needs:
 
-Note:  They want to make sure you are a constituent so they will ask for residential information.  
+- **290 votes** in the House (two-thirds of 435)
+- **67 votes** in the Senate (two-thirds of 100)
 
-YOU:  *"Hi, I'm Billy Joe Bob at 101 Main Street here in [Your city]"  
+But before it can be voted on, it needs to reach the floor. And the Speaker of the House controls what comes to the floor. No Speaker approval — no vote. This is where all of those 12,000 proposals "died in committee".
 
-REP1: *"Hi Billy Joe Bob, how can I help you?"*
+**There is a workaround.** It's called a Discharge Petition. If 218 House members sign it, the proposal is forced to the floor regardless of what the Speaker wants. The math:
 
-YOU:  *"Well, I'm calling about Joint Resolution 135.  Specifically, the Pardon Integrity Act introduced in December, 2025."*
+- 435 total House seats
+- 220 currently Republican
+- 215 currently Democratic
 
-REP1: *"Yep, I know it.  Let me refer you over to [so and so] as they are the experts in that domain.  Hang on."*
+If every Democrat signed, you'd need just **3 Republicans** to reach 218. That's the discharge petition threshold — forcing the floor vote even if the Speaker's objects.
 
-REP2: *"Hi, this is [REP2].  What's your name?"*
+Getting it to the floor is one thing. Passing it is another. You still need 290 votes in the House. With current numbers, that means roughly **75 Republicans** would need to cross the aisle. That's a much heavier lift. But not impossible. It's been done before — again, 27 times, to be exact.
 
-Note:  Possibly another 25 year-old PolySci but also could be more experienced here.
+### Stage 2: Ratification
 
-YOU:  *"I'm Billy Joe Bob and calling about Joint Resolution 135.  Specifically, the Pardon Integrity Act introduced in December, 2025."*
+Let's say Congress votes yes on the Joint Resolution. Both chambers hit two-thirds. Now what?
 
-REP2: *"Yep, what can I help you with on that?"*
+The proposal goes simultaneously to all 50 state legislatures. Directly. The President is completely removed from the equation — which, if you think about it, is exactly the point. You can't ask the person whose power you're constraining to approve constraining it. The founders thought that one through.
 
-YOU:  *"Well, I want this.  Why hasn't my rep cosponserd it?"*
+**What happens at the state level is simpler than most people realize.** The amendment enters each state's normal legislative process — committees, debate, floor votes — just like any other piece of state legislation. Minimum wage. Marijuana legalization. Speed limits.....US Constitutional Amendments.
 
-NOTE:  Here comes the bullshit...
+Two things worth noting:
 
-REP2: *"Thanks for the call, Billy Joe Bob.  We really appreciate [yada yada].  We are definitely looking into it as it was just recently introduced, like YOU said, in Dec 2025.  But, it's definitely on our plate to review."*
+1. **The Governor cannot veto it.** Just as the President is bypassed at the federal level, state governors have no veto power over constitutional ratification. The legislature acts alone.
+    
+2. **The people cannot referendum it.**  Meaning, you are allowing your State legislators to make the call.  If a majority of the people in a State wants gonzo pardon power but the legislators vote in favor of limits, the people can't do anything about it.  All the more reason to pay attention to whom you elect.
+    
 
-YOU:  *"Ok, so does this align with my reps agenda?  Because it aligns with mine."*
+**38 states** must ratify — three-quarters of 50. Wyoming's vote counts exactly as much as California's. There's no deadline unless Congress sets one. The 27th Amendment, regarding congressional pay, was proposed in 1789 by James Madison and ratified in 1992. That's 203 years from start to finish. Nobody ever set a deadline on it.
 
-At this point, it could go any direction and you're kind of one your own from here.  Remember, this isn't a Democratic or Republican thing...limiting Pardon power affects BOTH parties.  Anything is possible from here on out.
+### Stage 3: Certification
 
-But, if this is important to you, stand firm.  Make it clear this is what you want.  And, if this doesn't align with the current agenda, you will find someone else to vote for.  Trust me, they'll listen to that.
+Once 38 states ratify, the amendment goes to the **Archivist of the United States** — essentially the nation's chief record-keeper, housed at the National Archives. The Archivist counts the state certifications, verifies they're properly documented, issues a formal proclamation, and publishes the amendment in the Federal Register.
 
-Don't be intimidated.  Intimidate them. Whether you were one that voted them in, or not, they work for you.  Call them annoyingly:  every week, every day, every hour.  Whatever it takes.  They know that most people won't do this and it's a simple question: "When will you cosponser?"
+Think of this person as the highest-level notary in the country. Once they stamp it — it's Constitutional law. Immediately. Permanently. Nothing can change it except another amendment following the exact same process.
 
-If you can get your neighbors to call in, referencing you, then you'll build political points and they will listen more.  Honestly, if you get 5 people call and they all referenced you, your Congressman will call soon.  He/she might even stop by your house.  It doesn't take much.
+Which, as Prohibition showed, is possible. But requires a monumental shift in national will.
 
-## That's it...for now.  
+---
 
-The concept behind the JR is worthless without sponsorship so that should be your only goal at this point.  Don't even think about how to get that thing on the floor for a vote, just get the name of your representative on it.  That's all.
+## There's Already a Bill. And You've Never Heard of It.
 
-Once that happens, which could honestly take months, celebrate that win.  It might feel small but
+In December 2025, Congressman Johnny Olszewski (D-MD) introduced **[House Joint Resolution 135 — the Pardon Integrity Act.](https://www.congress.gov/119/bills/hjres135/BILLS-119hjres135ih.pdf)**
+
+Read it. It's one page. Seriously, one f'ing page. It's intentionally brief at this stage — more detail could actually hinder co-sponsorship.
+
+The Pardon Integrity Act would give Congress the ability to review and reject presidential pardons. Under the proposal:
+
+- 20 House members and 5 senators could trigger a formal review
+- Congress would have 60 days to nullify the pardon
+- A two-thirds majority in both chambers would be required to block it
+- The President could not re-issue the same pardon to the same person
+
+Congressman Don Bacon (R-NE) has signed on as the first Republican cosponsor — a retired Air Force brigadier general who's not seeking reelection and can afford to do the right thing without worrying about political consequences.
+
+Aaaaaaaannnndddd, there are consequences.  Obviously, if your party leader doesn't want change, your sponsorship will be considered defiance.  Who knows what the hell is going to happen to you.
+
+But, naive as I may be, I still think the majority of our Congress want to do the right thing.  
+
+As of March 2026, H.J.Res. 135 has two cosponsors.  Two.  But, it's a young bill (3 months old) and I bet you've never heard of it.  Now you have.
+
+Remember:  218 needed for the discharge petition. 290 needed to pass the House. Those numbers seem daunting until you remember: every amendment started at zero. And the people who put those 435 House members in office are the same people reading this post.
+
+You're reading this for a reason.
+
+---
+
+## What You Can Do — Step by Step
+
+The single most important thing right now is **co-sponsorship.** Not floor votes. Not state ratification. Just: more names on H.J.Res. 135. Co-sponsorship is momentum. Momentum creates visibility. Visibility creates political weight. Political weight creates action.
+
+Here's how to do it.
+
+---
+
+**Step 1: Read the Joint Resolution**
+
+One page. Read it. [https://www.congress.gov/bill/119th-congress/house-joint-resolution/135/text](https://www.congress.gov/bill/119th-congress/house-joint-resolution/135/text)
+
+---
+
+**Step 2: Check if your representative has already cosponsored it**
+
+[https://www.congress.gov/bill/119th-congress/house-joint-resolution/135/cosponsors](https://www.congress.gov/bill/119th-congress/house-joint-resolution/135/cosponsors)
+
+If your House rep's name is on that list — great. Send a thank you. They matter more than people think.
+
+If not — go to Step 3.
+
+---
+
+**Step 3: Find out who your Federal representatives are**
+
+This is where I need to be a little direct with you.
+
+Over 66% of eligible voters show up for presidential elections. Less than 45% vote in midterm congressional elections. That means more than half of you will stand in line to vote for someone you'll never meet — while skipping the election for the person who actually writes the laws you live under.
+
+Your House representative and two Senators are your direct line to Federal legislation. They work for you. Most of them hear from almost nobody.
+
+Find your House rep: [https://www.house.gov/representatives/find-your-representative](https://www.house.gov/representatives/find-your-representative)
+
+Find your Senators: [https://www.senate.gov/senators/senators-contact.htm](https://www.senate.gov/senators/senators-contact.htm)
+
+Or find everyone at once — House rep, both Senators, and state legislators — here: [https://www.usa.gov/elected-officials](https://www.usa.gov/elected-officials)
+
+---
+
+**Step 4: Create 3 contacts in your phone with their office numbers**
+
+Do this right now. You're going to make multiple calls and you don't want friction between deciding to do it and actually doing it.
+
+---
+
+**Step 5: Call your House representative**
+
+Yes, you can do this. They want you to. You're a constituent.
+
+You probably won't get your representative directly. You'll get a staffer — and that's actually what you want. Develop a relationship with that staffer. I'm going to say that again: **spend the time developing a real relationship with your representative's staff.** They are the ones who plant seeds. They are the ones who return calls. They are the ones who brief the representative before meetings.
+
+Don't be surprised if the assistant is a 25-year-old Poly-Sci grad. That's common. Don't discount their age — their idealism hasn't been crushed yet. Use that.
+
+**Here's how the first call goes:**
+
+> **STAFFER:** "Hello, Congressman [Name]'s office. What's your address?"
+> 
+> _They want to confirm you're a constituent._
+> 
+> **YOU:** "Hi, I'm [Name] at [address] in [city]."
+> 
+> **STAFFER:** "How can I help you?"
+> 
+> **YOU:** "I'm calling about Joint Resolution 135 — the Pardon Integrity Act, introduced in December 2025."
+> 
+> **STAFFER:** "Let me connect you with someone who handles that. One moment."
+> 
+> **YOU:** _(same intro to the next person)_
+> 
+> **STAFFER 2:** "What can I help you with?"
+> 
+> **YOU:** "I want this cosponsored. Why hasn't my representative signed on?"
+> 
+> **STAFFER 2:** "We appreciate the call, we're aware of it, it was just recently introduced, it's definitely on our radar to review..."
+> 
+> **YOU:** "Does this align with my representative's agenda? Because it aligns with mine."
+
+From here it goes wherever it goes. But hold this position: this isn't a Democratic or Republican issue. Limiting pardon power affects both parties equally. Any representative, from any district, has a defensible reason to cosponsor this. If it doesn't align with the current agenda — let them know that's a factor in how you vote. They will hear that.
+
+Call back. Call often. Get your neighbors to call and reference your name. Five constituent calls referencing the same person builds political capital fast — because these offices know most people don't call at all.
+
+---
+
+**Step 6: Call your two Senators — but the ask is different**
+
+Your Senators cannot cosponsor a House Joint Resolution — that's a House instrument only. But what they CAN do is introduce a **companion resolution** in the Senate — essentially the same proposal running simultaneously in both chambers. That's actually how major legislation builds real momentum. Two versions. Two chambers. Pressure from both directions at once.
+
+The ask to your Senators is:
+
+_"Are you aware of H.J.Res. 135 — the Pardon Integrity Act? Would you consider introducing a companion resolution in the Senate?"_
+
+That's a bigger ask than co-sponsoring — you're asking them to own it, not just sign onto it. Harder sell, bigger payoff. For what it's worth, Senator Blumenthal has already publicly discussed introducing a Senate version. The groundwork exists. Your Senator just needs a reason to move on it.
+
+Give them a reason by making a call.  No email, call them.
+
+---
+
+## That's It — For Now
+
+There have been 27 amendments to this Constitution. Every single one of them started exactly here — at zero — and then someone deciding it was worth the effort. The last amendment was ratified over 30 years ago. The founders would have expected more by now.
+
+I know this works because I've done it. I spent years advocating for the Pancreatic Cancer Action Network — sitting in congressional offices, talking to staffers, making the ask, building the relationships. I've met people who stared right through me and people who went out of their way to listen. It's a mixed bag. But it'll move if you make it move.
+
+If you can get your representative to cosponsor H.J.Res. 135, that's a real and measurable step toward a constitutional amendment. There have only been 27 of those in 238 years. You'd be part of #28.
+
+The Federal Government isn't broken. It's doing exactly what it was designed to do. Slowly, deliberately, with enormous friction — because that's how you protect against bad ideas as well as good ones. But it requires people to ask for change out loud.
+
+If you don't, then you're just yelling at clouds.
+
+[_Insert Old Man Yells at Cloud Simpsons image here_]
+
+Make the call.
+
+---
+
+_I'll update this post when there's movement on H.J.Res. 135. In the meantime, you know what to do._
