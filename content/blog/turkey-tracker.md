@@ -26,69 +26,47 @@ Before diving into the code, here's the 30,000-foot view. The system has five mo
 System Architecture:
 
 - config.yaml → Stores, thresholds, and settings
-    
+
 - Python App → Orchestrates everything:
-    
+
 - Kroger API — Product search, prices & locations
-    
+
 - LM Studio — Analyzes pricing data, identifies deals
-    
+
 - SMS Gateway — Sends deal alerts
-    
+
 - JSON Files — Stores raw data for tracking
-    
+
 
 ## Pulling Prices from the Kroger API
 
 The app searches three local stores simultaneously, pulling current turkey prices through the API. The Kroger API uses OAuth2, so you'll need to grab a token first, then hit the product search endpoint with your store's location ID:
 
+```python
 # Authenticate with Kroger API
-
 import requests
-
 from base64 import b64encode
-
-  
 
 credentials = b64encode(f"{client_id}:{client_secret}".encode()).decode()
 
-  
-
 token_resp = requests.post(
-
-    "https://api.kroger.com/v1/connect/oauth2/token",
-
-    headers={"Authorization": f"Basic {credentials}"},
-
-    data={"grant_type": "client_credentials", "scope": "product.compact"}
-
+    "https://api.kroger.com/v1/connect/oauth2/token",
+    headers={"Authorization": f"Basic {credentials}"},
+    data={"grant_type": "client_credentials", "scope": "product.compact"}
 )
-
 access_token = token_resp.json()["access_token"]
 
-  
-
 # Search for turkeys at a specific store
-
 products = requests.get(
-
-    "https://api.kroger.com/v1/products",
-
-    headers={"Authorization": f"Bearer {access_token}"},
-
-    params={
-
-        "filter.term": "whole frozen turkey",
-
-        "filter.locationId": store_id,
-
-        "filter.limit": 20
-
-    }
-
+    "https://api.kroger.com/v1/products",
+    headers={"Authorization": f"Bearer {access_token}"},
+    params={
+        "filter.term": "whole frozen turkey",
+        "filter.locationId": store_id,
+        "filter.limit": 20
+    }
 )
-
-  
+```
 
 ## The AI Layer: Local LLM Analysis
 
@@ -96,39 +74,24 @@ Here's where it gets interesting: instead of manually comparing dozens of produc
 
 Since LM Studio exposes an OpenAI-compatible API, integration is dead simple:
 
+```python
 # Send pricing data to local LLM for analysis
-
 response = requests.post(
-
-    "http://192.168.1.100:1234/v1/chat/completions",
-
-    json={
-
-        "model": "local-model",
-
-        "messages": [
-
-            {"role": "system", "content": "You are a price analyst..."},
-
-            {"role": "user", "content": f"""
-
-                Analyze these turkey prices. Find any below
-
-                ${threshold}/lb. Group results by store.
-
-                Data: {json.dumps(all_prices)}"""}
-
-        ]
-
-    }
-
+    "http://192.168.1.100:1234/v1/chat/completions",
+    json={
+        "model": "local-model",
+        "messages": [
+            {"role": "system", "content": "You are a price analyst..."},
+            {"role": "user", "content": f"""
+                Analyze these turkey prices. Find any below
+                ${threshold}/lb. Group results by store.
+                Data: {json.dumps(all_prices)}"""}
+        ]
+    }
 )
 
-  
-
 analysis = response.json()["choices"][0]["message"]["content"]
-
-  
+```
 
 This keeps the signal-to-noise ratio high—I only get alerts when there's actually something worth buying.
 
@@ -136,83 +99,50 @@ This keeps the signal-to-noise ratio high—I only get alerts when there's actua
 
 For notifications, I went with the simplest solution that actually works: email-to-SMS gateway. Every carrier has one (T-Mobile's is phonenumber@tmomail.net), and it's completely free. Using Python's built-in smtplib with a Gmail App Password, the system sends me a text whenever deals appear.
 
+```python
 import smtplib
-
 from email.mime.text import MIMEText
 
-  
-
 def send_sms(message, phone, carrier_gateway, gmail_user, gmail_app_pw):
+    msg = MIMEText(message)
+    msg["To"] = f"{phone}@{carrier_gateway}"
+    msg["From"] = gmail_user
 
-    msg = MIMEText(message)
-
-    msg["To"] = f"{phone}@{carrier_gateway}"
-
-    msg["From"] = gmail_user
-
-  
-
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
-
-        server.login(gmail_user, gmail_app_pw)
-
-        server.send_message(msg)
-
-  
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
+        server.login(gmail_user, gmail_app_pw)
+        server.send_message(msg)
 
 # That's it. ~50 lines total for the whole notification system.
-
 # No Twilio fees. No third-party services. Just SMTP.
-
-  
+```
 
 ## One Config File to Rule Them All
 
 Everything is configurable through a single YAML file: which stores to check, what price threshold triggers alerts, search terms, and notification settings. The app runs on-demand, but I could easily cron it to check daily.
 
+```yaml
 # config.yaml
-
 kroger_api:
-
-  client_id: "your-client-id"
-
-  client_secret: "your-client-secret"
-
-  
+  client_id: "your-client-id"
+  client_secret: "your-client-secret"
 
 stores:
-
-  - name: "Fred Meyer - Woodinville"
-
-    location_id: "70100153"
-
-  - name: "Fred Meyer - Bothell"
-
-    location_id: "70100097"
-
-  - name: "Fred Meyer - Kirkland"
-
-    location_id: "70100112"
-
-  
+  - name: "Fred Meyer - Woodinville"
+    location_id: "70100153"
+  - name: "Fred Meyer - Bothell"
+    location_id: "70100097"
+  - name: "Fred Meyer - Kirkland"
+    location_id: "70100112"
 
 search:
-
-  term: "whole frozen turkey"
-
-  price_threshold: 1.00  # dollars per pound
-
-  
+  term: "whole frozen turkey"
+  price_threshold: 1.00  # dollars per pound
 
 notifications:
-
-  phone: "5551234567"
-
-  carrier_gateway: "tmomail.net"
-
-  gmail_user: "your-email@gmail.com"
-
-  
+  phone: "5551234567"
+  carrier_gateway: "tmomail.net"
+  gmail_user: "your-email@gmail.com"
+```
 
 All the data gets saved to JSON files, so I can track price trends over time or feed them into other analyses. Total cost? Zero dollars—just API rate limits and my local LM Studio instance doing the AI work.
 
@@ -221,4 +151,3 @@ All the data gets saved to JSON files, so I can track price trends over time or 
 The best part? This approach works for any Kroger-owned store and any product. Change the search term from "whole frozen turkey" to "ribeye steak" or "tillamook cheese", adjust the price threshold, and you've got a universal deal finder.
 
 Sometimes the best solutions aren't the most complex—they're the ones that combine the right APIs, a bit of AI, and some creative problem-solving.
-
