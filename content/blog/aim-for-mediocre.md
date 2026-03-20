@@ -71,7 +71,7 @@ Building: People see my Office Shed and Greenhouse and argue with me on this one
 Three different spots on the ladder. One thing in common: I decided what "enough" looked like. So can you.
 
 ![My First DYI Project](https://seattlewren.s3.us-west-2.amazonaws.com/aim-for-mediocre/richmond.jpg)
-*My first DIY project as a home owner.  Didn't know what I was doing but, yet, still exists today.*
+*My first DIY project as a home owner.  Didn't know what I was doing but, three owners and 18 years later, it still exists today.*
 
 ## Starting Reveals What Doesn't Stick
 
