@@ -77,6 +77,11 @@ systemctl --user restart seattlewren-autodeploy   # restart
 systemctl --user restart cloudflared
 ```
 
+## Theme Colors
+- **Header / badges / tags**: British Racing Green `#2E4230` (light theme), `#3F5540` (dark theme badges)
+- Original was `#2d3529` — shifted greener per user preference
+- **Logo icon**: Placeholder wren SVG in header — user has their own image to replace it with later
+
 ## Homepage Categories
 - **Fixed display order** in `layouts/index.html`: Musings, AI, Lifestyle, Data
 - Order is defined via `$orderedCats` slice and `$catDisplay` dict (for proper casing like "AI")
