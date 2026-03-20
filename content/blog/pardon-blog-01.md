@@ -349,7 +349,7 @@ The Federal Government isn't broken. It's doing exactly what it was designed to 
 
 If you don't, then you're just yelling at clouds.
 
-[_Insert Old Man Yells at Cloud Simpsons image here_]
+[Old Man Yells At Cloud](https://seattlewren.s3.us-west-2.amazonaws.com/pardon-post/old-man-yells-at-cloud.jpg)
 
 Make the call.
 
