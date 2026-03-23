@@ -8,159 +8,145 @@ image: https://seattlewren.s3.us-west-2.amazonaws.com/national-debt/hero.png
 draft: true
 description: test description
 ---
+## The AI rabbit hole question
 
-The AI rabbit hole question: "What is the labor participation rate?"
+"What is the labor participation rate?"
 
 16 hours later, I had learned about our GDP, the National Debt, and the levers that can move each. Additionally, I learned about our labor participation rates, disability, and brainstormed some ideas for how AI can improve both. If that's the kind of stuff that interests you, read on.
 
+---
+## Political Disclaimer
 
-**_My normal Political Disclaimer…_**
+I won't be bashing any administration or mentioning any names in this post. That's irrelevant to the Federal process, and frankly, a distraction. This applies to all Presidents — past, present, and future.
+
+For what it's worth, I've voted for both sides of the aisle and consider myself politically agnostic. I like diagnosing and solving interesting problems. That's my motivation here.
+
+If you're heavy leaning one way or the other, this probably isn't your read. If you're genuinely curious about our National Debt, how it works, and what can be done -- read on.
 
 
-**Quick Review: What Is GDP, National Debt, Annual Deficit**
+---
+## Quick Review: What Is GDP, National Debt, Annual Deficit
 
-- **Gross Domestic Product:** The total value of everything the country produces in a calendar year (Jan–Dec).
-    
-- **National Debt:** The total amount borrowed (domestically and foreign) to cover what the Gov't spends fiscally (Oct–Sep).
-    
-- **Annual Deficit:** The difference between how much the country spends versus brings in via tax revenue calculated off the GDP.
-    
-**Here's the analogy you care about:**
+- **Gross Domestic Product:** The total value of everything the country produces in a calendar year (Jan–Dec).    
+- **National Debt:** The total amount borrowed (domestically and foreign) to cover what the Gov't spends fiscally (Oct–Sep).    
+- **Annual Deficit:** The difference between how much the country spends versus brings in via tax revenue calculated off the GDP.    
 
-You're a small business owner and run the local Hogie Hut.  You make the best cheesestakes around and business is good.  You employ 5 other people.  You make $100K per year and your house is paid off. Great, no mortgage. Only problem is the house is made of cardboard. You couldn't sell it if you wanted to, so don't count on it to bail you out.
+---
+## Here's the analogy you care about
 
-Even though you make $100K per year in GDP, you spend $106K running an annual deficit of $6K. Of that $106K, about $4K is just interest on past borrowing — so you're really only spending $102K running the household, but the other $4K is the price of every year you didn't balance the budget. Over time, you've racked up $122K in debt. No equity in it. You just have to pay it off.
+You're name is Joe Smith and you own a small business called the Hogie Hut.  Your shop makes the best cheese-stakes around and you have a solid customer base.  From your business, after paying your employees and costs, you make $100K per year.  You rent you house so you have no equity in your home.
 
-But, pay back to whom?
+Even though you make $100K per year income (GDP), you spend $106K ($6K Deficit). Of that $106K,  $4K is just interest on past credit cards — so you're really spending $102K running the household.  The other $4K is the price of every year you didn't balance your budget. Over time, you've racked up $122K in debt on your credit cards. No equity in it. You just have to pay it off.
 
-Two-thirds of that $122K is on American credit cards — banks, pension funds, your own retirement account buying government bonds. The other third is on international credit cards — foreign governments and investors, mostly Japan and China. And all of it is on adjustable rates. The introductory teaser period is ending, and the new rates are going to hurt.
+Pretty hefty, but you're living a good life.
+
+Two-thirds of that $122K is on American credit cards and the remaining one third is on international credit cards, mostly from Japan and China. And all of it is on adjustable rates. The introductory teaser period is ending soon and the new rates are going to hurt.  You know it, but keep kicking the can down the street.
 
 Welcome to the US!
 
-**The Obvious Levers**
+## The Obvious Levers
 
-It doesn't take a genius to figure this out. Your options are:
+It doesn't take a genius to figure this out. In order to pay that debt down, your options are:
 
 1. Grow, make more
-    
-2. Trim, spend less
-    
-3. Do both
-    
+2. Trim, spend less    
+3. Do both    
 
 **A Growth Example Could Look Like:**
 
-1. Work more and earn $106K to balance your budget. Debt holds steady at $122K — you're treading water.
-    
-2. Earn $107K. Now you've got $1K to start paying it off. Only 122 years to go.
-    
-3. That's 7% GDP growth needed just to start shrinking the debt. The US has averaged 2–3% for the last 20 years. Good luck.
-    
+1. Raise the price on your cheese-stakes and earn $106K to balance your budget. Debt holds steady at $122K — you're treading water.    
+2. Raise it even more and earn $107K. Now you've got $1K to start paying it off. Only 122 years to go.    
+3. That's 7% GDP growth needed just to start shrinking the debt, which is a big increase for your cheese-stake.  This assumes you won't lose any customers.  The US has averaged 2–3% for the last 20 years. Good luck.    
 
 **A Trim Example Could Look Like:**
 
-1. Spend only $100K to balance your budget. Debt holds steady at $122K.
-    
-2. Cut to $99K. Now you can pay off $1K a year. Same 122 years.
-    
-3. But remember those adjustable rates? If the rate on your $122K climbs from 3.3% to 4.5%, your interest bill jumps from $4K to $5,500. Your spending just went UP by $1,500 without buying a single thing. That surplus you worked so hard for? Gone.
-    
+1. Reduce your spend to only $100K to balance your budget. Debt holds steady at $122K.    
+2. Cut to $99K. Now you can pay off $1K a year. Same 122 years.    
+3. But remember those adjustable rates? If the rate on your $122K climbs from 3.3% to 4.5%, your interest bill jumps from $4K to $5,500. Your spending just went UP by $1,500 without buying a single thing. That surplus you worked so hard for? Gone.    
 
-Doing some combination of both would only help and we don't need to get into all that right now. It gets WAY more complicated, get ready.
+## Back to the Hogie Hut
+Your business has 5 employees.  Even though you don't have to because your business is small, you provide them a basic health plan. Also, you have a wife and four children, ages 16, 12, 6, and 3.  None of them currently work.
 
-  
-  
+First off, it's going to be hard to trim that $106K/year. You got mouths to feed, rent to make, and debt to pay.
 
-**Back to the Family Analogy**
+A Combo Example Could Look Like:
+1. Layoff one of your employees and just work more
+2. Still reduce your annual spend
+3. Now you're margin is higher but you're working a lot more
 
-We never talked about how many kids you have. Assuming you're Mormon and you have only one wife (as of now) and 8 kids ages 2, 4, 6, 8, 10, 12, 14, and 16. None of them work.
+In any case, you're sacrificing something.  Whether that's your time and effort or a need/luxury, something has got to go.  And that layoff employee might have the same problem.
 
-First off, it's going to be hard to trim that $106K/year. You got mouths to feed.
-
-The absolute easiest path is to have your wife work. Boom, new income and probably material — $50K per year. Now, your GDP is $150K a year! But, who's taking care of the kids? Yep, assume half of that new income goes to child care. So your spending just went from $106K to $131K. But your income is $150K. That's a $19K surplus. Things are looking up, at least from a financial perspective.
+Another path to new revenue is to have your wife work a separate job from your business. Boom, new income and probably material — $50K per year. Now, your GDP is $150K a year! But, who's taking care of the kids? Yep, assume half of that new income goes to child care. So your spending just went from $106K to $131K. But your income is $150K. That's a $19K surplus. Things are looking up, at least from a financial perspective.
 
 Suddenly, your 16 year old star linebacker starts eating more and your 14 year old just hit puberty, so he's devouring more food. Your spending naturally went from $131K to $133K just because kids are growing. Surplus down to $17K. And, you've got 6 more behind them.
 
-Then, a kid has a medical event. The $131K covers insurance but your deductible is $10K, and there goes that. Spending hits $143K. Surplus down to $7K.
+Then, a kid has a medical event. The $131K covers your health insurance but your deductible is $10K, and there goes that. Spending hits $143K. Surplus down to $7K.
 
 Watch what just happened. You went from $19K ahead, to $17K, to $7K — and you haven't even touched the $122K in debt yet. You've just been keeping up with new expenses.
 
 Oh yeah, those adjustable rates. The $4K in interest you were already paying? Rates just ticked up. Now it's $5,500 — an extra $1,500 added to your spending that you didn't plan for. Surplus down to $5,500.
 
-And your wife needs a car to get to work. She's been eyeing that Tesla. $500/month lease, insurance, charging — call it $9K a year. You went from a $5,500 surplus to a $3,500 deficit. Just like that, you're underwater again. But hey, at least the Tesla looks nice in the driveway next to your cardboard house.
+And your wife needs a car to get to work. She's been eyeing that Tesla. $500/month lease, insurance, charging — call it $9K a year. You went from a $5,500 surplus to a $3,500 deficit. Just like that, you're underwater again. But hey, at least the Tesla looks nice in the driveway.
 
 After all that, you've got your wife working, a shiny new car payment, and you're worse off than when you started. Sad but true.
 
-What's your best option now? Maybe your wife returns to stay at home to cut the childcare and the Tesla payment. Ok, but there goes the extra income and you've never paid down a dollar of debt. Put your 16 y/o to work and make him earn his keep? Not a bad idea but there goes high school football. Sell the Tesla? It depreciated 20% the moment you drove it off the lot.
-
-  
+What's your best option now? Maybe your wife returns to stay at home to cut the childcare and the Tesla payment. Ok, but there goes the extra income and you've never paid down a dollar of debt. Put your 16 y/o to work making cheesestakes and make him earn his keep? Not a bad idea but there goes high school football. Sell the Tesla? It depreciated 20% the moment you drove it off the lot.  
 
 Oh, the easiest option…..borrow more.
 
-  
-
 Welcome to the US!!
-
   
+## The Number The Actually Matters
 
-**Will** **They** **Ever Pay Off That Debt?**
-
-Nope. Their kids won’t either. And neither with the US. End stop. The national debt has gone up every single decade since 1930. It's not getting paid off. Ever.
+In order for the Smiths to pay down that debt, they would probably have to consider selling the Hogie Hut.  Otherwise, at the status quo, there is no chance. And, unless the US starts selling off States to other countries, neither with the US. End stop. The national debt has gone up every single decade since 1930. It's not getting paid off. Ever.
 
 You can stop reading here if you want. But, before you bail, know this: — that's not actually the problem.
 
-What matters is the ratio. As long as your income grows faster than your debt, you're fine. You owe $122K but you make $100K. (1.22) If next year you make $110K and owe $125K, you're actually in better shape (1.13) Because you're making more relative to what you owe, your debt-to-GDP ratio goes down.
+What matters is the ratio of debt to income. As long as your income grows faster than your debt, you're fine.  You owe $122K but you make $100K. (1.22) If next year you make $110K and owe $125K, you're actually in better shape (1.13) Because you're making more relative to what you owe, your debt-to-GDP ratio goes down.
 
-After WWII, the US owed 120% of GDP. Sound familiar? The debt kept growing in dollar terms for the next 35 years. But GDP grew faster, and the ratio dropped to 30% by 1980. Nobody "paid it off." The economy just outgrew it.
+After WWII, the US owed 120% of GDP. 1.20 ratio.  Sound familiar? The debt kept growing in dollar terms for the next 35 years. But GDP grew faster, and the ratio dropped to 22% by the mid 70s. Nobody "paid it off" and, in total dollars, increased every year. The economy just outgrew it.
 
-**We’ve Due For A Big Growth Spurt...Or Complete Collapse**
+## We’ve Due For A Big Growth Spurt...Or Giant Collapse
 
-> Chart: debt_to_gdp_chart.html (visible on published site)
+ Chart: debt_to_gdp_chart.html (visible on published site)
 
 <iframe src="/debt_to_gdp_chart.html" width="100%" height="700" style="border:none;"></iframe>
 
-**Interesting, eh? We kicked some serious ass after WWII to about 1984. So, what happened?**
+Interesting, eh? We kicked some serious ass after WWII for about 30 years. So, what happened?
 
-**Well,** **we** **had a country firing on all cylinders so why not create the most terrifying and intimidating National Defense the world has ever scene? Yep, that’s the first hump which continues into today. But, it’s not THAT much.**
+The debt-to-GDP ratio bottomed around 1974 at roughly 22%, then started climbing again through the 80s with defense spending and tax cuts. By 1984, the ratio was already heading back up.  As a country, we decided that is was important to have the most terrifying and intimidating National Defense the world has ever scene That’s the first hump which continues into today. But, it’s not THAT much.
 
-**Then, you’ll see a little dip in the late 90s. For us Gen X’ers, remember the dot.com boom? That’s part of it thanks to the massive increase in tax revenue from capital gains. But, what else? Turns out, Congress and the Administration actually worked together and balanced the budget.** **Not only that, they created a small surplus to actually pay down** **a little****. The surpluses ran during fiscal years** **started in** **‘98 and the good times kept rolling until ‘01.**
+Then, you’ll see a little dip in the late 90s. For us Gen X’ers, remember the dot.com boom? That’s part of it thanks to the massive increase in tax revenue from capital gains. But, what else? Turns out, Congress and the Administration actually worked together and balanced the budget. Not only that, they created a small surplus to actually pay down a little. The surpluses ran during fiscal years started in ‘98 and the good times kept rolling until ‘01, spanning two administrations.
 
-**Then 9/11 happene****d.**
+Then the dot.com bust, 9/11, the war in Afghanistan, the war in Iraq, even more tax cuts, the creation of Homeland Security and, finally, Medicare Part D.
 
-**The****n** **the war in Af****gahnistan**
+*Back to the Smiths*
+For about 25 years, the family was doing great. Then their stock portfolio took a hit (dot.com bust).  Someone broke into the Hogie Hut and ransacked the place (9/11). They found the perpetrator and brought him to justice (Afghan War) . Then, got all noble and tried to make sure it never happens to anyone else's business (Iraq War). The Hogie Hut closed for a while for repairs (less revenue), heath care costs went up for the employees (Medicare), and they installed a kick-ass security system on their house and business (Homeland Security).
 
-**Th****en the war in Iraq**
+All of that the (US) credit card.
 
-**Then the dot.com bust**
+## Easy Money Leads To Big Oops
 
-**Then a bunch of tax cuts,** **assuming it would spur growth**
+Times got rough.  Not just for the Smiths but for everyone.  Then, just a few years later, Joe's bank comes to him and says "Great news!  You qualify for a million dollar mortgage at only 3%!  Want a bigger house?  Home prices only go up, there is no risk in this."  
 
-**Then Homeland Security**
+You say “hell yes!” without thinking. Your kids were growing and you wanted more space.  And, you've been renting forever so time to start owning and making some equity, right?  After all, the bank said there was no risk.  They would know.
 
-**Then Medicare Part D**
+So, you buy a sweet crib for cool million.  The bank says "Congratulations on your new home!" -- then sells that mortgage to your neighbor's retirement fund a week later.  Joe's neighbor now owns part of Joe's home.
 
-****ALL**** ****Credit Card**** ****Spend****
+Then, suddenly, that 3% teaser rate skyrockets to 9%. Suddenly, the Smiths' mortgage triples and Joe tries to sell the home.  No one buys.  The scenario Joe never thought would happen -- happens.  His home is worth less than a million -- way less. 
 
-**For about 15 years, the** **Mormon** **family wa****s doing great****.** **Then, someone broke into the house and ransacked the place (9/11). They found the perpetrator and got even which cost time and money (Afghan War) . Then, they got all noble and tried to make sure it never happens to anyone else (Iraq War). Then their stock portfolio took a hit (dot.com bust), dad got demoted (tax cuts), heath care costs went up (Medicare), and they installed a kick-ass security system on their house (Homeland Security)**
+Worse yet, the health inspector rates the Hogie Hut a risk because he saw a rat.  The bad press loses even more customers.
 
-**All that just went on the credit card.**
+Joe's neighbor, Bob, gets a statement from his retirement fund.  It declined 50% in value and probably won't go back up anytime soon.  Bob's got to go back to work.
 
-**_**Bigger House(s)**_**
+Joe sells his million dollar home for $500K taking a massive loss.  Joe goes back to renting a home -- back to no equity and 3x more debt (from the original $122K).   Joe can't even make his interest payments let alone rent.
 
-**Then, someone says “Hey, you want a bigger house? In fact, want two,? You can rent one of them out.”**
+Bob's retirement fund as well.  Because Joe can't pay, Bob's retirement fund flounders.  Only one way out of this:  Bob chips in and pays a big chuck of Joe's debt so he can make payments. (ie:  TARP).
 
-**You say “hell yes!”** **without thinking.** **Now you own two huge houses, hoping to rent one out.**
+*Welcome to the Subprime Lending Crisis of 2008-2015!*
 
-**No one rents. That’s ok, your two mortgages are manageable because the interest is literally zero. And, the increase in home value covers you because you borrow against it, again at zero interest.** **Again, all the credit card.**
+---
 
-**Then, suddenly, those zero percent** **teaser** **rates skyrocket to 1****8****%.** **You never read that fine print.**
+## The Full Picture
 
-**Then, you get another demotion making even less money** **(GDP shrinks)**
-
-**You try to sell your rental house, no one buys. The value of** **both your** **homes f****a****ll to less than what you owe.**
-
-**You default on your rental home. But, you can’t default on your primary home,** **y****ou’ve got 8 kids.**
-
-**You start paying mortgage -- on your credit card –** **for the next 6 years.**
-
-**Welcome to the** **Subprime Lending** **Crisis of** **2009-2015!**
+<iframe src="/debt_to_gdp_chart_shaded.html" width="100%" height="700" style="border:none;"></iframe>
