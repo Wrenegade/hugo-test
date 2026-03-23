@@ -3,7 +3,7 @@ title: Pardon Power - We're Overdue For A Constitutional Amendment.
 date: 2026-03-17
 layout: photo
 categories:
-  - Politics
+  - Social
 image: https://logos-world.net/wp-content/uploads/2024/10/Department-of-Justice-Logo.png
 draft: false
 description: The only place in the Federal Government that bypasses checks and balances...and can be changed without a presidential signature
