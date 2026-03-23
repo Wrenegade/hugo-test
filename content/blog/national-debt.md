@@ -4,7 +4,7 @@ date: 2026-03-14
 layout: photo
 categories:
   - Social
-image:
+image: https://seattlewren.s3.us-west-2.amazonaws.com/national-debt/hero.png
 draft: true
 description: test description
 ---
