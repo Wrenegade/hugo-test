@@ -1,0 +1,147 @@
+{{/* Comments section — include in any single-post layout */}}
+{{ $slug := .RelPermalink | replaceRE `^/` "" | replaceRE `/$` "" }}
+<section class="comments-section" id="comments" data-slug="{{ $slug }}">
+  <h2>Comments</h2>
+
+  {{/* Comment form */}}
+  <form class="comment-form" id="comment-form">
+    <label for="comment-name">Name</label>
+    <input type="text" id="comment-name" name="author_name" placeholder="Your name" required maxlength="100">
+    <label for="comment-text">Comment</label>
+    <textarea id="comment-text" name="comment_text" placeholder="Share your thoughts..." required maxlength="5000"></textarea>
+    <input type="hidden" id="comment-parent-id" name="parent_id" value="">
+    <button type="submit">Post Comment</button>
+    <div class="comment-form-message" id="comment-form-message"></div>
+  </form>
+
+  {{/* Comment list — populated by JS */}}
+  <div id="comment-list"></div>
+</section>
+
+<script>
+(function() {
+  var section = document.getElementById('comments');
+  var slug = section.getAttribute('data-slug');
+  var form = document.getElementById('comment-form');
+  var msgEl = document.getElementById('comment-form-message');
+  var listEl = document.getElementById('comment-list');
+  var parentInput = document.getElementById('comment-parent-id');
+
+  function escapeHtml(str) {
+    var div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function timeAgo(dateStr) {
+    var diff = (Date.now() - new Date(dateStr).getTime()) / 1000;
+    if (diff < 60) return 'just now';
+    if (diff < 3600) return Math.floor(diff / 60) + 'm ago';
+    if (diff < 86400) return Math.floor(diff / 3600) + 'h ago';
+    if (diff < 2592000) return Math.floor(diff / 86400) + 'd ago';
+    return new Date(dateStr).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  }
+
+  function buildTree(comments) {
+    var map = {};
+    var roots = [];
+    comments.forEach(function(c) { map[c.id] = Object.assign({}, c, { children: [] }); });
+    comments.forEach(function(c) {
+      if (c.parent_id && map[c.parent_id]) {
+        map[c.parent_id].children.push(map[c.id]);
+      } else {
+        roots.push(map[c.id]);
+      }
+    });
+    return roots;
+  }
+
+  function renderComment(c) {
+    var html = '<div class="comment-item" data-id="' + c.id + '">';
+    html += '<div class="comment-meta">';
+    html += '<span class="comment-author">' + escapeHtml(c.author_name) + '</span>';
+    html += '<span class="comment-date">' + timeAgo(c.created_at) + '</span>';
+    html += '</div>';
+    html += '<div class="comment-body">' + escapeHtml(c.comment_text) + '</div>';
+    html += '<button class="comment-reply-btn" data-id="' + c.id + '" data-name="' + escapeHtml(c.author_name) + '">Reply</button>';
+    if (c.children && c.children.length) {
+      html += '<div class="comment-replies">';
+      c.children.forEach(function(child) { html += renderComment(child); });
+      html += '</div>';
+    }
+    html += '</div>';
+    return html;
+  }
+
+  function loadComments() {
+    fetch('/api/comments/' + encodeURIComponent(slug))
+      .then(function(r) { return r.json(); })
+      .then(function(comments) {
+        if (!comments.length) {
+          listEl.innerHTML = '<p class="comment-empty">No comments yet. Be the first!</p>';
+          return;
+        }
+        var tree = buildTree(comments);
+        var html = '<div class="comment-list">';
+        tree.forEach(function(c) { html += renderComment(c); });
+        html += '</div>';
+        listEl.innerHTML = html;
+
+        listEl.querySelectorAll('.comment-reply-btn').forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            parentInput.value = btn.getAttribute('data-id');
+            var name = btn.getAttribute('data-name');
+            msgEl.textContent = 'Replying to ' + name;
+            msgEl.className = 'comment-form-message';
+            document.getElementById('comment-text').focus();
+          });
+        });
+      })
+      .catch(function() {
+        listEl.innerHTML = '<p class="comment-empty">Unable to load comments.</p>';
+      });
+  }
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Posting...';
+    msgEl.textContent = '';
+
+    var payload = {
+      post_slug: slug,
+      author_name: form.author_name.value.trim(),
+      comment_text: form.comment_text.value.trim()
+    };
+    if (parentInput.value) payload.parent_id = parseInt(parentInput.value, 10);
+
+    fetch('/api/comments', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+    .then(function(r) {
+      if (!r.ok) return r.json().then(function(d) { throw new Error(d.error || 'Failed'); });
+      return r.json();
+    })
+    .then(function() {
+      form.comment_text.value = '';
+      parentInput.value = '';
+      msgEl.textContent = 'Comment posted!';
+      msgEl.className = 'comment-form-message success';
+      btn.disabled = false;
+      btn.textContent = 'Post Comment';
+      loadComments();
+    })
+    .catch(function(err) {
+      msgEl.textContent = err.message || 'Something went wrong.';
+      msgEl.className = 'comment-form-message error';
+      btn.disabled = false;
+      btn.textContent = 'Post Comment';
+    });
+  });
+
+  loadComments();
+})();
+</script>

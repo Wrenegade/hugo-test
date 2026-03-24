@@ -19,6 +19,21 @@ pool: asyncpg.Pool = None
 async def lifespan(app: FastAPI):
     global pool
     pool = await asyncpg.create_pool(DATABASE_URL, min_size=1, max_size=5)
+    await pool.execute("""
+        CREATE TABLE IF NOT EXISTS comments (
+            id          SERIAL PRIMARY KEY,
+            post_slug   TEXT NOT NULL,
+            author_name TEXT NOT NULL,
+            comment_text TEXT NOT NULL,
+            parent_id   INTEGER REFERENCES comments(id),
+            ip_address  TEXT,
+            user_agent  TEXT,
+            created_at  TIMESTAMPTZ NOT NULL DEFAULT now()
+        )
+    """)
+    await pool.execute("""
+        CREATE INDEX IF NOT EXISTS idx_comments_post_slug ON comments(post_slug)
+    """)
     yield
     await pool.close()
 
@@ -96,6 +111,75 @@ async def record_page_view(request: Request):
         path, ip_address, user_agent, referer, country, city,
     )
     return {"success": True}
+
+
+@app.get("/api/comments/{slug:path}")
+async def get_comments(slug: str):
+    rows = await pool.fetch(
+        """SELECT id, post_slug, author_name, comment_text, parent_id,
+                  created_at
+           FROM comments
+           WHERE post_slug = $1
+           ORDER BY created_at ASC""",
+        slug,
+    )
+    return [
+        {
+            "id": r["id"],
+            "post_slug": r["post_slug"],
+            "author_name": r["author_name"],
+            "comment_text": r["comment_text"],
+            "parent_id": r["parent_id"],
+            "created_at": r["created_at"].isoformat(),
+        }
+        for r in rows
+    ]
+
+
+@app.post("/api/comments", status_code=201)
+@limiter.limit("10/hour")
+async def post_comment(request: Request):
+    body = await request.json()
+    post_slug = (body.get("post_slug") or "").strip()
+    author_name = (body.get("author_name") or "").strip()
+    comment_text = (body.get("comment_text") or "").strip()
+    parent_id = body.get("parent_id")
+
+    if not post_slug:
+        return JSONResponse(status_code=400, content={"error": "post_slug is required"})
+    if not author_name:
+        return JSONResponse(status_code=400, content={"error": "Name is required"})
+    if len(author_name) > 100:
+        return JSONResponse(status_code=400, content={"error": "Name is too long"})
+    if not comment_text:
+        return JSONResponse(status_code=400, content={"error": "Comment is required"})
+    if len(comment_text) > 5000:
+        return JSONResponse(status_code=400, content={"error": "Comment is too long (max 5000 chars)"})
+
+    if parent_id is not None:
+        parent = await pool.fetchrow("SELECT id FROM comments WHERE id = $1", int(parent_id))
+        if not parent:
+            return JSONResponse(status_code=400, content={"error": "Parent comment not found"})
+
+    ip_address = _get_ip(request)
+    user_agent = request.headers.get("user-agent")
+
+    row = await pool.fetchrow(
+        """INSERT INTO comments (post_slug, author_name, comment_text, parent_id, ip_address, user_agent)
+           VALUES ($1, $2, $3, $4, $5, $6)
+           RETURNING id, post_slug, author_name, comment_text, parent_id, created_at""",
+        post_slug, author_name, comment_text,
+        int(parent_id) if parent_id is not None else None,
+        ip_address, user_agent,
+    )
+    return {
+        "id": row["id"],
+        "post_slug": row["post_slug"],
+        "author_name": row["author_name"],
+        "comment_text": row["comment_text"],
+        "parent_id": row["parent_id"],
+        "created_at": row["created_at"].isoformat(),
+    }
 
 
 @app.get("/health")
