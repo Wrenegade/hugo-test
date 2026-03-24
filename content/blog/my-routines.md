@@ -6,7 +6,7 @@ categories:
   - Musings
 image: https://seattlewren.s3.us-west-2.amazonaws.com/my-routines/hero.png
 draft: false
-description: Mine took years to harden but I can't live without them
+description: Mine took years to harden.  I can't live without them.
 ---
 Routines are how I control my life.  Trust me when I say this, I'm not one of those junkies that gets up, drinks a gallon of water, does yoga for an hour then eats an avocado toast with handfuls of supplements.  I'm not that guy.  And that's not this post.
 
