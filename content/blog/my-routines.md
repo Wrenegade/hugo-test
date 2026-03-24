@@ -31,7 +31,7 @@ But, that home office is also my music studio...all my gear is in there.  It's v
 
 To summarize:  I get up, make coffee, quick stretch (on the floor), check weather, the hit the to-do list.  Once I feel like I've got a solid to-do list, then I consider that the **start** of my day.  All of this happens between 5am and 7am.
 
-## Routine #2:  Re-assess my to-do list
+## Routine #2:  Re-assess my to-do list, adjust the backlog
 Yep, after all that, I look at my list and say "there's no way all that's going to happen"
 
 I had just spent an hour setting it up perfectly.  Then, I immediately cherry pick the one or two things that I actually will do that day.  Why?  Because I know the day will not be perfect.  Not even close.
