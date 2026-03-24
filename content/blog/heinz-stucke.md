@@ -14,11 +14,9 @@ Last August, during my first European bicycle tour, I got to have a beer with hi
 
 ## Getting There
 
-I've been bicycle touring for the better part of twenty years. Not epic cross-continent slogs — mostly one to two week stretches, done in chunks. I have a long-term goal to ride the entire West Coast, but lately I've been focused on Germany. I have family there, I left a bike there, and I'm learning the language. The align
+I've been bicycle touring for the better part of twenty years. Not epic cross-continent slogs — mostly one to two week stretches, done in chunks. I have a long-term goal to ride the entire West Coast, but lately I've been focused on Germany. I have family there, I left a bike there, and I'm learning the language. The alignent of reasons makes it easy to justify going back.
 
-ent of reasons makes it easy to justify going back.
-
-My 2025 tour started in Amsterdam and took me east and south through the Dutch and German countryside toward Kassel, where my in-laws live. The route ran through Münster, and somewhere between there and Kassel sat a small, quiet town called Hövelhof.
+My 2025 tour started in Amsterdam and took me East and South through the Dutch and German countryside toward Kassel, where my in-laws live. The route ran through Münster, and somewhere between there and Kassel sat a small, quiet town called Hövelhof.
 
 That's where Heinz lives now. After more than fifty years on the road — through over 190 countries — he came home. Not by choice, really. Age made that decision for him.
 
