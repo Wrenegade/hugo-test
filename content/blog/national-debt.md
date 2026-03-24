@@ -193,17 +193,17 @@ Debt to GDP: 1.22 down to 0.61.
 
 0.60.
 
-Where did I get that number?  From me.  I saying.  Boom.  
+Where did I get that number?  From me.  I'm saying it.  Boom.  
 
 How do I justify that number?  I don't.  I just state it.  0.60.  That's the goal.  That's the target.
 
 Because, it doesn't matter what it really is so long as it's less, and significantly, than today.  So I picked a moment in time where the country was doing well and we're not sacrificing national security.  That's my optimal number.
 
-Yours could be different.  You might want to get all the way back to 1974 at 0.31.  Great, go for it.  But you gotta go through 0.60 to get there so you'll satisfy me.
+Yours could be different.  You might want to get all the way back to 1974 at 0.31.  Great, go for it. But you gotta go through 0.60 to get there so you'll satisfy me.
 
-Again, whatever the number is, the solution to get there is the same:  YOU have to increase your productivity WITHOUT increasing your costs.
+Again, whatever the number is, the solution to get there is the same:  YOU have to increase your productivity WITHOUT increasing your debt.
 
-Joe's has to sell more Hoagies without more cost.  You have to deliver more at your job without more costs.   Everyone has to produce more under the same conditions as now.  Efficiency is the gain in GDP.  There isn't a Plan B.
+Joe's has to sell more Hoagies without more debt.  You, as a worker, have to deliver more at your job utilizing what you have.   Everyone has to produce more under the same conditions.  Efficiency is the gain in GDP.  There isn't a Plan B.
 
 Here's the funny thing:  AI can't give you the optimal number. Just for fun, I'm going to ask it right now and paste the response:
 
@@ -217,16 +217,16 @@ Here's the funny thing:  AI can't give you the optimal number. Just for fun, I'm
 
 > **Copilot:** If you force me to pick a single number for a typical advanced economy, the sweet spot many economists point to is **around 60% of GDP**. It’s the level the EU originally set as a stability benchmark, historically associated with strong growth and fiscal flexibility, and low enough to avoid interest-rate pressure while high enough to allow investment.
 
-Wow!  I swear to God, I came up with my number before I got any of those responses.  I stand corrected, AI *can* give you a number.  0.60 has legs so let's just roll with that.
+Wow!  I swear to God, I came up with my number before I got any of those responses.  I stand corrected, AI *can* give you a number.  0.60 has legs so let's just roll with it.
 
 ## How To Get There
 This is the "Step by Step" part that you've been patiently waiting for.
 
 Step 1..of 1:  Think about Joe's Hoagie Hut.
 
-How does he double his output without increasing his costs?
+How does he double his output without increasing his debt?
 
-Yes, his $106K spend may go up.  But, remember, that's not part of the ratio.  It's just "Debt" to "Gross".  So, his spend may go up but his debt stays the same.  That's fine, it doesn't change the ratio.  As long as Joe spends less than he makes, he's not borrowing.  No new debt.  Joe just has more gross income but didn't use a debt vehicle to get there.
+Yes, his $106K spend may go up.  But, remember, that's not part of the ratio.  It's just "Debt" to "Gross".  So, his spend goes up but his debt stays the same.  That's fine, it doesn't change the ratio.  As long as Joe spends less than he makes, he's not borrowing.  No new debt.  Joe just has more gross income but didn't use a debt vehicle to get there.
 
 And, he's not paying down any debt either.  He could, and that would help.  But, Joe would prefer to invest any additional money he has to grow more.
 
