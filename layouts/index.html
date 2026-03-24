@@ -20,7 +20,7 @@
         <div class="hero-sidebar-title">
           <span class="cat-badge">Latest</span>
         </div>
-        {{ range $posts | first 4 }}
+        {{ range $posts | after 1 | first 4 }}
         {{ $post := . }}
         <div class="sidebar-card">
           {{ with .Params.image }}

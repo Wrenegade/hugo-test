@@ -83,9 +83,10 @@ systemctl --user restart cloudflared
 - **Logo icon**: Placeholder wren SVG in header — user has their own image to replace it with later
 
 ## Homepage Categories
-- **Fixed display order** in `layouts/index.html`: Musings, AI, Lifestyle, Data
+- **Fixed display order** in `layouts/index.html`: Musings, AI, Social, Data
 - Order is defined via `$orderedCats` slice and `$catDisplay` dict (for proper casing like "AI")
 - Categories not in the ordered list (e.g., General, Hobbies from templates) won't appear on the homepage
+- **Latest sidebar** now skips the featured hero post (`after 1 | first 4`) to avoid duplication — the Trending fallback already did this
 
 ## Git
 - **Repo**: https://github.com/Wrenegade/seattlewren-prod.git
