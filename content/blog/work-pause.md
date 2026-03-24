@@ -76,7 +76,7 @@ Once that’s installed, your body will tell you when Routine #2 needs to kick i
 
 The principle: the more independent a routine is — the fewer things it depends on — the more durable it is and the more you can stack on top of it. Start with routines that require nothing but you showing up.
 
-I’ve written a separate post about my routines [here]. It’s taken close to 10 years to make some of them routines so it’s important to be patient. Start with quick win routines and then move onto ones that require more time.
+I’ve written a separate post about my routines [here](https://jonnywren.com/blog/my-routines). It’s taken close to 10 years to make some of them routines so it’s important to be patient. Start with quick win routines and then move onto ones that require more time.
 
 ## AI Is Your New School
 
@@ -99,6 +99,7 @@ Here are some things I’m using AI for:
 
 If you’ve never really used AI beyond asking it the weather, here’s your starting point. Copy and paste this into any AI model:
 
+[CLAUDE - PUT THIS INTO A NICE TEXT BLOCK]
 My name is [Your first name]
 
 I live in the [general area]
@@ -108,10 +109,7 @@ I’ve worked as a [your last position]
 I’ve been out of work for [your timeframe]
 
 My experience with AI has been [describe it — more detail is better]
-
-  
-
-I read an article that suggests I ask you 10 questions a day to start building a routine with AI. I honestly don’t know where to start. What 10 questions do you suggest?
+[CLAUDE- END TEXT BLOCK]
 
 Anyone can do that. I can’t tell you what it’ll return for you, but that’s your starting point.
 
@@ -137,42 +135,7 @@ As for me, I feel optimistic but that’s because I have produced some tangible 
 
 As Bill Murray said to Chevy Chase in Caddyshack “Hey, if you ever wanna rap or just get weird with somebody”…regarding AI, I’ll be there.
 
-Jonny Wren
+Jon Wren
 
-Contact me at [TBD]
+Contact me at jonwren@seattlewren.com
 
-Link to my Aim For Mediocracy post
-
-Links to me getting weird with AI [my AI blog section]
-
-  
-
-## Content I Cut (Save for Follow-Up Posts)
-
-“My Routine Stack” — a deep-dive companion post:
-
-•  The full Wake/Eat/Shit/Sleep logging framework with sub-routines
-
-•  The calorie stacking system (Routine #1 → Routine #2 trigger)
-
-•  Dryuary and how small commitments compound over years
-
-•  The tape measure routine (small, charming, very you)
-
-•  “Routines are Art more than Science” — goals vs. routines distinction
-
-•  The “search for 500-cal meals” reframe
-
-•  “Don’t Make It Complicated” — the warning about over-logging
-
-“Fun Routines Can Be Valuable” — could be its own short post:
-
-•  Guitar practice → DAW recording → editing skills → Adobe/DaVinci
-
-•  The principle that fun hobbies can build transferable skills
-
-“Build Quick Win Routines” — could fold into the Routine Stack post:
-
-•  The three-tier garden example (start a garden → pull weeds → design the garden)
-
-•  The principle of low-friction, high-visibility routines
