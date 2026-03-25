@@ -7,3 +7,4 @@ autodeploy.sh
 nginx.conf
 docker-compose.yml
 data/
+archive/
