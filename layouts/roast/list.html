@@ -1,0 +1,504 @@
+{{ define "main" }}
+<style>
+  /* ---- Roast Me Page ---- */
+  .roast-hero {
+    text-align: center;
+    padding: 80px 24px 40px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .roast-hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 3.2rem;
+    line-height: 1.1;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .roast-hero h1 .fire {
+    display: inline-block;
+    animation: flicker 1.5s infinite alternate;
+  }
+  @keyframes flicker {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.1) rotate(-3deg); }
+    50% { transform: scale(0.95) rotate(2deg); }
+    75% { transform: scale(1.05) rotate(-1deg); }
+  }
+  .roast-tagline {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+  .roast-disclaimer {
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+    margin-bottom: 0;
+  }
+  .roast-stats {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin: 24px auto 0;
+    padding: 16px 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    max-width: 400px;
+  }
+  .roast-stat {
+    text-align: center;
+  }
+  .roast-stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.8rem;
+    color: var(--accent);
+    display: block;
+    line-height: 1.2;
+  }
+  .roast-stat-label {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* ---- Roast Form ---- */
+  .roast-section {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+  .roast-form-wrapper {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 48px;
+  }
+  .roast-form-header {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+    color: var(--text);
+  }
+  .roast-form-subheader {
+    font-size: 0.9rem;
+    color: var(--text-tertiary);
+    margin-bottom: 20px;
+  }
+  .roast-form label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .roast-form input[type="text"],
+  .roast-form textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+    transition: border-color 0.2s;
+  }
+  .roast-form input[type="text"]:focus,
+  .roast-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+  .roast-form textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  .roast-form button[type="submit"] {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 10px 28px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .roast-form button[type="submit"]:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+  }
+  .roast-form button[type="submit"]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+  .roast-form-message {
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+  .roast-form-message.success { color: #2E7D32; }
+  .roast-form-message.error { color: var(--accent); }
+
+  /* ---- Roast Wall ---- */
+  .roast-wall-header {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .roast-wall-header::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* Individual roast cards */
+  .roast-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    position: relative;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .roast-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
+  .roast-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .roast-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--green-dark);
+    color: var(--tag-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .roast-author {
+    font-weight: 600;
+    color: var(--text);
+    font-size: 0.95rem;
+  }
+  .roast-date {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    margin-left: auto;
+  }
+  .roast-body {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text);
+    margin-bottom: 10px;
+  }
+  .roast-reply-btn {
+    background: none;
+    border: none;
+    color: var(--text-tertiary);
+    font-size: 0.8rem;
+    cursor: pointer;
+    padding: 2px 0;
+    transition: color 0.2s;
+  }
+  .roast-reply-btn:hover {
+    color: var(--accent);
+  }
+  .roast-replies {
+    margin-left: 40px;
+    margin-top: 12px;
+    padding-left: 16px;
+    border-left: 2px solid var(--border-light);
+  }
+  .roast-replies .roast-item {
+    background: transparent;
+    border: none;
+    padding: 12px 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .roast-replies .roast-item:last-child {
+    border-bottom: none;
+  }
+  .roast-replies .roast-item:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .roast-empty {
+    text-align: center;
+    padding: 48px 24px;
+    color: var(--text-tertiary);
+    font-style: italic;
+  }
+  .replying-to-banner {
+    background: var(--code-bg);
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .replying-to-banner button {
+    background: none;
+    border: none;
+    color: var(--text-tertiary);
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 0 4px;
+  }
+  .replying-to-banner button:hover {
+    color: var(--accent);
+  }
+
+  @media (max-width: 600px) {
+    .roast-hero h1 { font-size: 2.2rem; }
+    .roast-stats { flex-direction: column; gap: 12px; }
+    .roast-replies { margin-left: 16px; padding-left: 12px; }
+  }
+</style>
+
+<div class="roast-hero">
+  <h1><span class="fire">🔥</span> Roast Me <span class="fire">🔥</span></h1>
+  <p class="roast-tagline">Go ahead. Tell me everything that's wrong with this site. I can take it. (Probably.)</p>
+  <p class="roast-disclaimer">100% public. No takebacks. Your words live here forever. Choose violence wisely.</p>
+  <div class="roast-stats">
+    <div class="roast-stat">
+      <span class="roast-stat-num" id="roast-count">—</span>
+      <span class="roast-stat-label">Roasts</span>
+    </div>
+    <div class="roast-stat">
+      <span class="roast-stat-num" id="roast-savagery">—</span>
+      <span class="roast-stat-label">Avg. Savagery</span>
+    </div>
+    <div class="roast-stat">
+      <span class="roast-stat-num" id="ego-remaining">87%</span>
+      <span class="roast-stat-label">Ego Remaining</span>
+    </div>
+  </div>
+</div>
+
+<div class="roast-section">
+  {{/* ---- Roast Form ---- */}}
+  <div class="roast-form-wrapper">
+    <div class="roast-form-header">Drop Your Roast</div>
+    <p class="roast-form-subheader">Be creative. Be brutal. Spelling counts (barely).</p>
+    <form class="roast-form" id="roast-form">
+      <div id="replying-to-banner" style="display:none" class="replying-to-banner">
+        <span id="replying-to-text"></span>
+        <button type="button" id="cancel-reply" title="Cancel reply">&times;</button>
+      </div>
+      <label for="roast-name">Your Alias</label>
+      <input type="text" id="roast-name" name="author_name" placeholder="Anonymous Coward, Gordon Ramsay's Ghost, etc." required maxlength="100">
+      <label for="roast-text">Your Roast</label>
+      <textarea id="roast-text" name="comment_text" placeholder="This site looks like it was designed by a committee of raccoons who just discovered CSS..." required maxlength="5000"></textarea>
+      <input type="hidden" id="roast-parent-id" name="parent_id" value="">
+      <button type="submit">🔥 Roast Away</button>
+      <div class="roast-form-message" id="roast-form-message"></div>
+    </form>
+  </div>
+
+  {{/* ---- Roast Wall ---- */}}
+  <div class="roast-wall-header">The Wall of Shame</div>
+  <div id="roast-list"></div>
+</div>
+
+<script>
+(function() {
+  var SLUG = 'roast';
+  var form = document.getElementById('roast-form');
+  var msgEl = document.getElementById('roast-form-message');
+  var listEl = document.getElementById('roast-list');
+  var parentInput = document.getElementById('roast-parent-id');
+  var replyBanner = document.getElementById('replying-to-banner');
+  var replyText = document.getElementById('replying-to-text');
+  var cancelReply = document.getElementById('cancel-reply');
+  var countEl = document.getElementById('roast-count');
+  var savageryEl = document.getElementById('roast-savagery');
+  var egoEl = document.getElementById('ego-remaining');
+
+  var snarkPhrases = [
+    'Ouch. That one stung.',
+    'Roast received. Ego bruised.',
+    'Filed under: pain.',
+    'Noted. Crying later.',
+    'Added to the wall of shame.',
+    'My therapist will hear about this.',
+    'Brutal. Respect.',
+    'Well, that was unnecessarily accurate.'
+  ];
+
+  function escapeHtml(str) {
+    var div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function getInitials(name) {
+    return name.split(/\s+/).map(function(w) { return w[0]; }).join('').substring(0, 2).toUpperCase();
+  }
+
+  function timeAgo(dateStr) {
+    var diff = (Date.now() - new Date(dateStr).getTime()) / 1000;
+    if (diff < 60) return 'just now';
+    if (diff < 3600) return Math.floor(diff / 60) + 'm ago';
+    if (diff < 86400) return Math.floor(diff / 3600) + 'h ago';
+    if (diff < 2592000) return Math.floor(diff / 86400) + 'd ago';
+    return new Date(dateStr).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  }
+
+  function buildTree(comments) {
+    var map = {};
+    var roots = [];
+    comments.forEach(function(c) { map[c.id] = Object.assign({}, c, { children: [] }); });
+    comments.forEach(function(c) {
+      if (c.parent_id && map[c.parent_id]) {
+        map[c.parent_id].children.push(map[c.id]);
+      } else {
+        roots.push(map[c.id]);
+      }
+    });
+    return roots;
+  }
+
+  function renderRoast(c) {
+    var html = '<div class="roast-item" data-id="' + c.id + '">';
+    html += '<div class="roast-meta">';
+    html += '<div class="roast-avatar">' + getInitials(c.author_name) + '</div>';
+    html += '<span class="roast-author">' + escapeHtml(c.author_name) + '</span>';
+    html += '<span class="roast-date">' + timeAgo(c.created_at) + '</span>';
+    html += '</div>';
+    html += '<div class="roast-body">' + escapeHtml(c.comment_text) + '</div>';
+    html += '<button class="roast-reply-btn" data-id="' + c.id + '" data-name="' + escapeHtml(c.author_name) + '">↩ Reply</button>';
+    if (c.children && c.children.length) {
+      html += '<div class="roast-replies">';
+      c.children.forEach(function(child) { html += renderRoast(child); });
+      html += '</div>';
+    }
+    html += '</div>';
+    return html;
+  }
+
+  function updateStats(comments) {
+    var total = comments.length;
+    countEl.textContent = total;
+
+    // "Savagery" = avg comment length / 50, capped at 10, with one decimal
+    if (total > 0) {
+      var avgLen = comments.reduce(function(s, c) { return s + c.comment_text.length; }, 0) / total;
+      var savagery = Math.min(10, (avgLen / 50) * 10).toFixed(1);
+      savageryEl.textContent = savagery + '/10';
+    } else {
+      savageryEl.textContent = '—';
+    }
+
+    // Ego drops 3% per roast, floor at 0%
+    var ego = Math.max(0, 100 - (total * 3));
+    egoEl.textContent = ego + '%';
+  }
+
+  function loadRoasts() {
+    fetch('/api/comments/' + SLUG)
+      .then(function(r) { return r.json(); })
+      .then(function(comments) {
+        updateStats(comments);
+
+        if (!comments.length) {
+          listEl.innerHTML = '<div class="roast-empty">No roasts yet? Cowards. <br>Be the first to hurt my feelings.</div>';
+          return;
+        }
+        var tree = buildTree(comments);
+        // Show newest first
+        tree.reverse();
+        var html = '';
+        tree.forEach(function(c) { html += renderRoast(c); });
+        listEl.innerHTML = html;
+
+        listEl.querySelectorAll('.roast-reply-btn').forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            parentInput.value = btn.getAttribute('data-id');
+            var name = btn.getAttribute('data-name');
+            replyText.textContent = 'Replying to ' + name + ' — pile on!';
+            replyBanner.style.display = 'flex';
+            document.getElementById('roast-text').focus();
+          });
+        });
+      })
+      .catch(function() {
+        listEl.innerHTML = '<div class="roast-empty">Failed to load roasts. Even the server is roasting me by not working.</div>';
+      });
+  }
+
+  cancelReply.addEventListener('click', function() {
+    parentInput.value = '';
+    replyBanner.style.display = 'none';
+  });
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Throwing shade...';
+    msgEl.textContent = '';
+
+    var payload = {
+      post_slug: SLUG,
+      author_name: form.author_name.value.trim(),
+      comment_text: form.comment_text.value.trim()
+    };
+    if (parentInput.value) payload.parent_id = parseInt(parentInput.value, 10);
+
+    fetch('/api/comments', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+    .then(function(r) {
+      if (!r.ok) return r.json().then(function(d) { throw new Error(d.error || 'Failed'); });
+      return r.json();
+    })
+    .then(function() {
+      form.comment_text.value = '';
+      parentInput.value = '';
+      replyBanner.style.display = 'none';
+      msgEl.textContent = snarkPhrases[Math.floor(Math.random() * snarkPhrases.length)];
+      msgEl.className = 'roast-form-message success';
+      btn.disabled = false;
+      btn.textContent = '🔥 Roast Away';
+      loadRoasts();
+    })
+    .catch(function(err) {
+      msgEl.textContent = err.message === 'Too many requests'
+        ? 'Slow down, Satan. You\'re rate-limited.'
+        : (err.message || 'Something broke. Ironic.');
+      msgEl.className = 'roast-form-message error';
+      btn.disabled = false;
+      btn.textContent = '🔥 Roast Away';
+    });
+  });
+
+  loadRoasts();
+})();
+</script>
+{{ end }}
