@@ -232,7 +232,7 @@ Yes, his $106K spend may go up.  But, remember, that's not part of the ratio.  I
 
 And, he's not paying down any debt either.  He could, and that would help.  But, Joe would prefer to invest any additional money he has to grow more.
 
-**And, that's how the US works!**
+**And, that's how the U.S. works!**
 
 Sorry about the anti-climatic ending to this post, but it really is that simple.  Everyone in the US -- you, me, politicians, private business -- we all dug this hole.  Together.  **The only way out is to grow our way out.**
 
@@ -240,6 +240,6 @@ So, help Joe out.  Figure out ways he can double his business.  Then apply those
 
 If we all do that, we'll get to ***my*** 0.60.
 
-For ideas for how to educate and leverage AI, for you and Joe, go here [Future Post]
+For a fun (and depressing) calculator to forecast Debt to GDP, go here: [Labor Participation & The Debt Ratio](/data/labor-participation/).
 
 For the best cheese-stake hoagie, go here;  https://hoagiehut.rest/
