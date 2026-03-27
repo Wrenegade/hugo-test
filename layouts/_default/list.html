@@ -8,7 +8,7 @@
     {{ range .Pages }}
     <article class="card-grid-item">
       {{ with .Params.image }}
-      <img src="{{ . }}" alt="" loading="lazy">
+      <a href="{{ $.Permalink }}"><img src="{{ . }}" alt="" loading="lazy"></a>
       {{ end }}
       <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
       {{ with .Params.description }}

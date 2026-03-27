@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>U.S. Birth Rate (1940–2024)</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/3.0.1/chartjs-plugin-annotation.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #ffffff;
+    color: #1a1a1a;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    max-width: 960px;
+    width: 100%;
+  }
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #1a1a1a;
+  }
+  .subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+  .chart-wrapper {
+    position: relative;
+    width: 100%;
+    height: 480px;
+  }
+  .source {
+    font-size: 11px;
+    color: #999;
+    margin-top: 12px;
+    text-align: right;
+  }
+  .source a { color: #999; }
+  .callouts {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .callout {
+    flex: 1;
+    min-width: 200px;
+    background: #f7f7f7;
+    border-left: 3px solid #2563eb;
+    padding: 12px 16px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .callout strong { display: block; font-size: 22px; color: #2563eb; margin-bottom: 2px; }
+  .callout.green { border-left-color: #16a34a; }
+  .callout.green strong { color: #16a34a; }
+  .callout.red { border-left-color: #dc2626; }
+  .callout.red strong { color: #dc2626; }
+  .callout.orange { border-left-color: #ea580c; }
+  .callout.orange strong { color: #ea580c; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>U.S. Birth Rate</h1>
+  <p class="subtitle">1940–2024 &nbsp;|&nbsp; Births per 1,000 population. Each generation made fewer kids than the one before.</p>
+  <div class="chart-wrapper">
+    <canvas id="birthChart"></canvas>
+  </div>
+  <p class="source">Sources: <a href="https://www.cdc.gov/nchs/data-visualization/natality-trends/index.htm">CDC / NCHS Natality Data</a> · <a href="https://fred.stlouisfed.org/series/SPDYNCBRTINUSA">World Bank via FRED (SPDYNCBRTINUSA)</a></p>
+  <div class="callouts">
+    <div class="callout green">
+      <strong>25.0 per 1,000</strong>
+      1957 — Peak of the Baby Boom. Post-war optimism, GI Bill, suburbs, single-income households that could afford a house and four kids.
+    </div>
+    <div class="callout">
+      <strong>16.7 per 1,000</strong>
+      1976 — The trough. Birth control pill, women entering the workforce, Roe v. Wade, stagflation. Boomers were having fewer kids than their parents.
+    </div>
+    <div class="callout red">
+      <strong>11.0 per 1,000</strong>
+      2022 — All-time low. Housing costs, student debt, delayed marriage, economic uncertainty. Gen Z isn't even starting.
+    </div>
+  </div>
+</div>
+<script>
+// US Crude Birth Rate per 1,000 population (CDC/NCHS + World Bank/FRED)
+const rawData = [
+  [1940,19.4],[1941,20.3],[1942,22.2],[1943,22.7],[1944,21.2],[1945,20.4],
+  [1946,24.1],[1947,26.6],[1948,24.9],[1949,24.5],[1950,24.1],[1951,24.9],
+  [1952,25.1],[1953,25.0],[1954,25.3],[1955,25.0],[1956,25.2],[1957,25.3],
+  [1958,24.5],[1959,24.0],[1960,23.7],[1961,23.3],[1962,22.4],[1963,21.7],
+  [1964,21.0],[1965,19.4],[1966,18.4],[1967,17.8],[1968,17.6],[1969,17.9],
+  [1970,18.4],[1971,17.2],[1972,15.6],[1973,14.8],[1974,14.8],[1975,14.6],
+  [1976,14.6],[1977,15.1],[1978,15.0],[1979,15.6],[1980,15.9],[1981,15.8],
+  [1982,15.9],[1983,15.6],[1984,15.6],[1985,15.8],[1986,15.6],[1987,15.7],
+  [1988,16.0],[1989,16.4],[1990,16.7],[1991,16.2],[1992,15.8],[1993,15.4],
+  [1994,15.0],[1995,14.6],[1996,14.4],[1997,14.2],[1998,14.3],[1999,14.2],
+  [2000,14.4],[2001,14.1],[2002,13.9],[2003,14.1],[2004,14.0],[2005,14.0],
+  [2006,14.2],[2007,14.3],[2008,13.9],[2009,13.5],[2010,13.0],[2011,12.7],
+  [2012,12.6],[2013,12.4],[2014,12.5],[2015,12.4],[2016,12.2],[2017,11.8],
+  [2018,11.6],[2019,11.4],[2020,11.0],[2021,11.0],[2022,11.0],[2023,10.7],
+  [2024,11.0]
+];
+
+const dataPoints = rawData.map(d => ({ x: d[0], y: d[1] }));
+
+const ctx = document.getElementById('birthChart').getContext('2d');
+new Chart(ctx, {
+  type: 'line',
+  data: {
+    datasets: [{
+      label: 'Birth Rate (per 1,000)',
+      data: dataPoints,
+      borderColor: '#2563eb',
+      backgroundColor: 'rgba(37, 99, 235, 0.08)',
+      fill: true,
+      borderWidth: 2.5,
+      pointRadius: 0,
+      pointHoverRadius: 5,
+      pointHoverBackgroundColor: '#2563eb',
+      tension: 0.2
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: {
+      intersect: false,
+      mode: 'index'
+    },
+    scales: {
+      x: {
+        type: 'linear',
+        min: 1940,
+        max: 2025,
+        grid: { display: false },
+        ticks: {
+          stepSize: 10,
+          font: { size: 11 },
+          color: '#666'
+        }
+      },
+      y: {
+        min: 8,
+        max: 28,
+        ticks: {
+          callback: v => v,
+          font: { size: 11 },
+          color: '#666',
+          stepSize: 2
+        },
+        grid: { color: '#eee' }
+      }
+    },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        backgroundColor: '#1a1a1a',
+        titleFont: { size: 14 },
+        bodyFont: { size: 13 },
+        padding: 10,
+        callbacks: {
+          title: (items) => String(items[0].parsed.x),
+          label: (item) => `  ${item.parsed.y.toFixed(1)} per 1,000`
+        }
+      },
+      annotation: {
+        annotations: {
+          // === Generational shading ===
+          silentGen: {
+            type: 'box',
+            xScaleID: 'x', yScaleID: 'y',
+            xMin: 1940, xMax: 1946,
+            yMin: 8, yMax: 28,
+            backgroundColor: 'rgba(107,114,128,0.08)',
+            borderWidth: 0,
+            label: {
+              display: true,
+              content: ['Silent Generation', 'Born 1928–1945'],
+              position: { x: 'center', y: 'start' },
+              font: { size: 9, weight: 'bold' },
+              color: 'rgba(107,114,128,0.6)',
+              padding: { top: 8, left: 4, right: 4 }
+            }
+          },
+          boomers: {
+            type: 'box',
+            xScaleID: 'x', yScaleID: 'y',
+            xMin: 1946, xMax: 1964,
+            yMin: 8, yMax: 28,
+            backgroundColor: 'rgba(37,99,235,0.08)',
+            borderWidth: 0,
+            label: {
+              display: true,
+              content: ['Baby Boomers', 'Born 1946–1964'],
+              position: { x: 'center', y: 'start' },
+              font: { size: 10, weight: 'bold' },
+              color: 'rgba(37,99,235,0.6)',
+              padding: { top: 8, left: 4, right: 4 }
+            }
+          },
+          genx: {
+            type: 'box',
+            xScaleID: 'x', yScaleID: 'y',
+            xMin: 1965, xMax: 1980,
+            yMin: 8, yMax: 28,
+            backgroundColor: 'rgba(147,51,234,0.08)',
+            borderWidth: 0,
+            label: {
+              display: true,
+              content: ['Gen X', 'Born 1965–1980'],
+              position: { x: 'center', y: 'start' },
+              font: { size: 10, weight: 'bold' },
+              color: 'rgba(147,51,234,0.6)',
+              padding: { top: 8, left: 4, right: 4 }
+            }
+          },
+          millennials: {
+            type: 'box',
+            xScaleID: 'x', yScaleID: 'y',
+            xMin: 1981, xMax: 1996,
+            yMin: 8, yMax: 28,
+            backgroundColor: 'rgba(22,163,74,0.08)',
+            borderWidth: 0,
+            label: {
+              display: true,
+              content: ['Millennials', 'Born 1981–1996'],
+              position: { x: 'center', y: 'start' },
+              font: { size: 10, weight: 'bold' },
+              color: 'rgba(22,163,74,0.6)',
+              padding: { top: 8, left: 4, right: 4 }
+            }
+          },
+          genz: {
+            type: 'box',
+            xScaleID: 'x', yScaleID: 'y',
+            xMin: 1997, xMax: 2012,
+            yMin: 8, yMax: 28,
+            backgroundColor: 'rgba(234,88,12,0.08)',
+            borderWidth: 0,
+            label: {
+              display: true,
+              content: ['Gen Z', 'Born 1997–2012'],
+              position: { x: 'center', y: 'start' },
+              font: { size: 10, weight: 'bold' },
+              color: 'rgba(234,88,12,0.6)',
+              padding: { top: 8, left: 4, right: 4 }
+            }
+          },
+          genalpha: {
+            type: 'box',
+            xScaleID: 'x', yScaleID: 'y',
+            xMin: 2013, xMax: 2025,
+            yMin: 8, yMax: 28,
+            backgroundColor: 'rgba(220,38,38,0.08)',
+            borderWidth: 0,
+            label: {
+              display: true,
+              content: ['Gen Alpha', 'Born 2013–'],
+              position: { x: 'center', y: 'start' },
+              font: { size: 9, weight: 'bold' },
+              color: 'rgba(220,38,38,0.6)',
+              padding: { top: 8, left: 4, right: 4 }
+            }
+          },
+          // === Replacement rate line ===
+          replacementRate: {
+            type: 'line',
+            yMin: 13.5,
+            yMax: 13.5,
+            borderColor: 'rgba(220, 38, 38, 0.4)',
+            borderWidth: 2,
+            borderDash: [6, 4],
+            label: {
+              display: true,
+              content: '~13.5 — Replacement rate threshold',
+              position: 'end',
+              backgroundColor: 'rgba(220, 38, 38, 0.7)',
+              font: { size: 11 },
+              padding: 4
+            }
+          },
+          // === Key points ===
+          boomPeak: {
+            type: 'point',
+            xValue: 1957,
+            yValue: 25.3,
+            backgroundColor: 'rgba(37, 99, 235, 0.9)',
+            radius: 6,
+            borderColor: '#fff',
+            borderWidth: 2,
+            label: {
+              display: true,
+              content: 'Boom peak: 25.3',
+              position: 'end',
+              backgroundColor: 'rgba(37, 99, 235, 0.8)',
+              font: { size: 10, weight: 'bold' },
+              padding: 3,
+              yAdjust: -20
+            }
+          },
+          pillDrop: {
+            type: 'label',
+            xValue: 1965,
+            yValue: 22,
+            content: ['The Pill (1960)', '+ Roe v. Wade (1973)'],
+            font: [{ size: 9, weight: 'bold' }, { size: 9 }],
+            color: 'rgba(147,51,234,0.7)'
+          },
+          trough76: {
+            type: 'point',
+            xValue: 1976,
+            yValue: 14.6,
+            backgroundColor: 'rgba(147, 51, 234, 0.8)',
+            radius: 5,
+            label: {
+              display: true,
+              content: '1976 low: 14.6',
+              position: 'end',
+              backgroundColor: 'rgba(147, 51, 234, 0.7)',
+              font: { size: 10 },
+              padding: 3,
+              yAdjust: -18
+            }
+          },
+          today: {
+            type: 'point',
+            xValue: 2024,
+            yValue: 11.0,
+            backgroundColor: 'rgba(220, 38, 38, 0.9)',
+            radius: 7,
+            borderColor: '#fff',
+            borderWidth: 2,
+            label: {
+              display: true,
+              content: '2024: 11.0',
+              position: 'start',
+              backgroundColor: 'rgba(220, 38, 38, 0.9)',
+              font: { size: 11, weight: 'bold' },
+              padding: 4,
+              yAdjust: -22
+            }
+          },
+          belowReplacement: {
+            type: 'label',
+            xValue: 2008,
+            yValue: 10,
+            content: ['Below replacement', 'since ~2008'],
+            font: [{ size: 10, weight: 'bold' }, { size: 9 }],
+            color: 'rgba(220,38,38,0.7)'
+          }
+        }
+      }
+    }
+  }
+});
+</script>
+</body>
+</html>

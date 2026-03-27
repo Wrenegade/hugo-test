@@ -336,6 +336,8 @@ function render() {
 
       const entry = document.createElement('div');
       entry.className = 'fact-entry';
+      const slug = (fact.year || year) + '-' + fact.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+      entry.id = slug;
       if (activeFilter !== 'all') {
         entry.classList.add(matches ? 'highlighted' : 'dimmed');
         if (matches) entry.style.setProperty('--topic-color', TOPIC_COLORS[activeFilter]);
