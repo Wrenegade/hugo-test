@@ -1,0 +1,143 @@
+---
+title: "I Filed a Patent to Kill Patent Trolls — And You Can Help"
+date: 2026-03-28
+layout: photo
+categories:
+  - Social
+image:
+draft: true
+description: "I used AI to draft a patent that defends independent inventors from AI-powered patent trolls. It costs $65 to file. It will never be enforced. And every dollar over $5K goes to Pancreatic Cancer Action Network."
+---
+
+## The Short Version
+
+I used AI to file a patent that protects people from AI-generated patent trolling.  It will never be enforced against small inventors.  It's funded by the public, for the public.  Every dollar raised over $5,000 goes to Pancreatic Cancer Action Network.
+
+If you want the full raw transcript of how this idea was born — every search, every link, every dumb joke — read [The Raw Tape](/blog/patent-raw/).  Nothing was edited.  Nothing was cleaned up.
+
+If you want the story, keep reading.
+
+---
+
+## How This Started
+
+I've been keeping a [running list of sketchy things happening in AI](/blog/you-should-know/) that most people don't know about.  Entry #1 is about patent trolling — how someone can use AI to mass-generate thousands of broadly worded patent applications, slap their name on all of them, and then sue anyone who independently comes up with the same idea.
+
+While I was riffing with AI on that post, I asked a question that changed the direction of my morning: **"Has anyone patented using AI to automate the patent process?"**
+
+The answer is yes.  Multiple times.  [Going back to 1998](https://patents.google.com/patent/US6049811A/en).  Someone literally patented a machine that writes patent applications.
+
+Then I asked: **"Is there an opportunity to create one that protects against this?"**
+
+And that's when it got interesting.
+
+---
+
+## The Gap
+
+Every existing patent in this space is about *creating* patents — using AI to draft claims, generate applications, automate the filing process.  They're offensive weapons.
+
+On the defense side, there are commercial products — [Patlytics](https://www.patlytics.ai/), [XLSCOUT](https://xlscout.ai/invalidator-llm/), [DeepIP](https://www.deepip.ai/) — that help companies challenge bad patents.  But they're all built for enterprises.  They assume you have a legal team and a budget.
+
+Nobody has built a **consumer-grade, proactive, publicly funded defense system** for the people who actually get hurt: independent inventors, small startups, the mom-and-pop shop in Portland that builds something cool and then gets a demand letter from someone who never built anything but filed 100 patents with AI.
+
+So I built one.  Or at least, I filed the patent for one.  Today.  For $65.
+
+---
+
+## What the Patent Does
+
+**Title:** "System and Method for Detecting and Defending Against Mass-Filed, AI-Generated Patent Claims Targeting Independent Inventors"
+
+The system works at three stages:
+
+### Stage 1: Kill Troll Patents Before They Exist
+
+This is the big one.  When someone files a patent, the USPTO publishes it.  Once published, **anyone** can submit prior art to the examiner through a process called [third-party preissuance submission](https://www.uspto.gov/patents/initiatives/third-party-preissuance-submissions).  Cost: **free** for your first 3 documents.  $72 after that.
+
+The system monitors new filings, flags troll patterns (one person, 100 filings, broad claims, no products, AI-generated language), auto-searches for prior art, and submits it to the USPTO.  The examiner gets the information they need to reject or narrow the claims.  The troll never gets a granted patent.  The victim never knows they were in the crosshairs.
+
+No lawsuits.  No lawyers.  Just giving the patent examiner more information.  Which is exactly what the process was designed for.
+
+### Stage 2: Kill Troll Patents After They're Granted
+
+If one slips through, anyone can request the USPTO reexamine it through **ex parte reexamination**.  Cost: ~$12,600.  Institution rate: over 90%.  The system identifies the weakest troll patents and packages the reexam request.
+
+$12,600 to kill a patent that could extort millions from small inventors.
+
+### Stage 3: Arm the People Who Get the Demand Letter
+
+Inventor gets a threatening letter.  They plug their product description into the system.  It returns: troll probability score, overlapping claims, prior art that predates the filing, and a template response letter.  Most trolls fold when someone shows up with a prior art package.  They need targets who don't fight back.
+
+---
+
+## The Absurdity Is the Point
+
+Let's be clear about what's happening here: **I used AI to draft a patent that protects people from AI-generated patents.**  I am fully aware of the irony.  That's the point.
+
+The patent system is so broken that the only way to protect people from it is to use the system against itself.  I'm filing a patent not to make money, not to sue anyone, but to sit on the defensive position so that nobody else can patent this concept and charge for it.
+
+If someone does try to patent a similar defensive system and enforces it against small inventors, I already hold the prior art.  I sue — not to profit, but to fund the public utility.  The settlement money goes back into the system.  Surplus goes to [Pancreatic Cancer Action Network](https://www.pancan.org/).  The troll literally funds their own opposition and cancer research.
+
+---
+
+## What Your Money Does
+
+[GOFUNDME LINK GOES HERE]
+
+**Goal: $5,000**
+
+| Amount | What It Does |
+|--------|-------------|
+| $65 | Files the provisional patent (done) |
+| ~$1,200 | Converts to full utility patent |
+| ~$2,200 | Keeps it alive for 20 years |
+| $12,600 per reexam | Kills a granted troll patent |
+| $0–$72 per submission | Kills a troll patent *before* it's granted |
+| **Everything over $5K** | **Pancreatic Cancer Action Network** |
+
+---
+
+## Why Am I Doing This?
+
+I lost my mom to scammers who exploited her for six years.  She died in a hospital in Stockton, California.  I wrote the [full story here](/blog/jamaican-lottery-scams-and-my-mom/).
+
+Pancreatic cancer took other people I love.  PanCAN fights it.  If this project raises more money than it needs — and I hope it does — every extra dollar goes there.
+
+---
+
+## The Commitment
+
+I'm putting this in writing, publicly, attached to my name:
+
+1. **This patent will never be enforced offensively** against any individual, small business, open-source project, academic institution, or nonprofit
+2. **All research, reasoning, and drafting is public** — read [The Raw Tape](/blog/patent-raw/)
+3. **All funds are accounted for** — patent costs come off the top, everything else goes to PanCAN
+4. **The provisional patent application itself is available for download** — [get it here]
+
+---
+
+## What Happens Next
+
+1. ~~File provisional patent application~~ *(done — March 28, 2026)*
+2. Launch GoFundMe
+3. Publish this post and The Raw Tape
+4. Convert provisional to full utility application (within 12 months)
+5. Build the monitoring and preissuance submission system
+6. Start killing troll patents
+
+---
+
+## How You Can Help
+
+**Fund it:** [GOFUNDME LINK]
+
+**Share it:** If you know an independent inventor, a startup founder, or anyone who's ever gotten a patent troll demand letter — send them this post.
+
+**Build it:** If you're a developer and want to help build the monitoring and submission system as open source, reach out.  The patent protects the concept from being locked down, but the tool itself should be built in the open.
+
+**Fight back:** [Call your representatives](/blog/pardon-power-were-overdue-for-a-constitutional-amendment/).  Congress writes the laws.  The USPTO can only work within the framework Congress gives it.  If you want systemic change, that's where it starts.
+
+---
+
+*This post and its companion [Raw Tape](/blog/patent-raw/) were created on March 28, 2026.  The provisional patent application was filed the same day.  Everything is public.  That's the whole point.*
